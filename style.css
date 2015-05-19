@@ -200,7 +200,7 @@ td {
 }
 
     /*FOOTER */
-/*#footer {
+#footer {
   background: #333;
   color: #aaa;
   font-size: 1em;
@@ -227,7 +227,7 @@ td {
   color : #73868c;
   background : inherit;
   text-decoration : none;
-}*/
+}
 
     /*TYPOGRAPHY */
 h1 {

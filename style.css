@@ -77,17 +77,7 @@ color: #73868c;
 text-align: center;
 }
 
-#column{
-  float: left;
-  width: 29%;
-  margin: .3em 1.1%;
-  margin-bottom: 40px;
-  background: #f7f7f7;
-  color: #303030;
-  padding: 1% 1%;
-}
-
-#number {
+.number {
   background: #ccc;
   padding: .6% 3%;
   color: #FFF;

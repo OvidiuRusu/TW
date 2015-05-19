@@ -184,6 +184,21 @@ td {
   position: relative;
 }
 
+/*Profesor Index*/
+
+#courses{
+  float: left;
+  margin-top: 50px;
+}
+
+#coursenav{
+  list-style: none;
+}
+
+#courses a{
+  font-size: 17px;
+}
+
     /*FOOTER */
 /*#footer {
   background: #333;

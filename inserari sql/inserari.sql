@@ -11,14 +11,14 @@ INSERT INTO account(IdAccount, Username, Password, Tip) VALUES (6, 'florin.iacob
 INSERT INTO account(IdAccount, Username, Password, Tip) VALUES (7, 'raluca.gimbuta', 'parola', 'P');
 INSERT INTO account(IdAccount, Username, Password, Tip) VALUES (8, 'lucian.lazar', 'parola', 'P');
 
-INSERT INTO profesor(IdProfesor, Nume, Prenume, Email, Titlu, IdFacultate, IdAccount) VALUES (1, 'Buraga', 'Sabin', 'sabin.buraga@info.uaic.ro', 'Conf.dr.', 1, 1);
-INSERT INTO profesor(IdProfesor, Nume, Prenume, Email, Titlu, IdFacultate, IdAccount) VALUES (2, 'Amariei', 'Ciprian', 'ciprian.amariei@info.uaic.ro', 'Prof', 1, 2);
-INSERT INTO profesor(IdProfesor, Nume, Prenume, Email, Titlu, IdFacultate, IdAccount) VALUES (3, 'Farsinaru', 'Cristian', 'cristian.farsianru@info.uaic.ro', 'Lect.dr.', 1, 3);
-INSERT INTO profesor(IdProfesor, Nume, Prenume, Email, Titlu, IdFacultate, IdAccount) VALUES (4, 'Moruz', 'Alex', 'alex.moruz@info.uaic.ro', 'Lect.dr.', 1, 4);
-INSERT INTO profesor(IdProfesor, Nume, Prenume, Email, Titlu, IdFacultate, IdAccount) VALUES (5, 'Iftene', 'Adrian', 'adrian.iftene@info.uaic.ro', 'Decan', 1, 5);
-INSERT INTO profesor(IdProfesor, Nume, Prenume, Email, Titlu, IdFacultate, IdAccount) VALUES (6, 'Iacob', 'Florin', 'florin.iacob@info.uaic.ro', 'Lect.dr.', 1, 6);
-INSERT INTO profesor(IdProfesor, Nume, Prenume, Email, Titlu, IdFacultate, IdAccount) VALUES (7, 'Gimbuta', 'Raluca', 'raluca.gimbuta@info.uaic.ro', 'Assist.', 1, 7);
-INSERT INTO profesor(IdProfesor, Nume, Prenume, Email, Titlu, IdFacultate, IdAccount) VALUES (8, 'Lazar', 'Lucian', 'lucian.lazar@info.uaic.ro', 'Assist.', 1, 8);
+INSERT INTO profesor(IdProfesor, Nume, Prenume, Email, Titlu, IdFacultate, IdAccount) VALUES (1, 'Buraga', 'Sabin', 'sabin.buraga@info.uaic.ro', 'Conf.dr.', 101, 1);
+INSERT INTO profesor(IdProfesor, Nume, Prenume, Email, Titlu, IdFacultate, IdAccount) VALUES (2, 'Amariei', 'Ciprian', 'ciprian.amariei@info.uaic.ro', 'Prof', 101, 2);
+INSERT INTO profesor(IdProfesor, Nume, Prenume, Email, Titlu, IdFacultate, IdAccount) VALUES (3, 'Farsinaru', 'Cristian', 'cristian.farsianru@info.uaic.ro', 'Lect.dr.', 101, 3);
+INSERT INTO profesor(IdProfesor, Nume, Prenume, Email, Titlu, IdFacultate, IdAccount) VALUES (4, 'Moruz', 'Alex', 'alex.moruz@info.uaic.ro', 'Lect.dr.', 101, 4);
+INSERT INTO profesor(IdProfesor, Nume, Prenume, Email, Titlu, IdFacultate, IdAccount) VALUES (5, 'Iftene', 'Adrian', 'adrian.iftene@info.uaic.ro', 'Decan', 101, 5);
+INSERT INTO profesor(IdProfesor, Nume, Prenume, Email, Titlu, IdFacultate, IdAccount) VALUES (6, 'Iacob', 'Florin', 'florin.iacob@info.uaic.ro', 'Lect.dr.', 101, 6);
+INSERT INTO profesor(IdProfesor, Nume, Prenume, Email, Titlu, IdFacultate, IdAccount) VALUES (7, 'Gimbuta', 'Raluca', 'raluca.gimbuta@info.uaic.ro', 'Assist.', 101, 7);
+INSERT INTO profesor(IdProfesor, Nume, Prenume, Email, Titlu, IdFacultate, IdAccount) VALUES (8, 'Lazar', 'Lucian', 'lucian.lazar@info.uaic.ro', 'Assist.', 101, 8);
 
   
   

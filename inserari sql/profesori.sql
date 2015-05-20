@@ -1,3 +1,3 @@
-INSERT INTO profesor(IdProfesor, Nume, Prenume, Email, Titlu, IdFacultate, IdAccount) VALUES (1, Buraga, Sabin, sabin.buraga@info.uaic.ro, Conf dr., 1, 1);
-INSERT INTO profesor(IdProfesor, Nume, Prenume, Email, Titlu, IdFacultate, IdAccount) VALUES (1, Amariei, Ciprian, ciprian.amariei@info.uaic.ro, Prof, 1, 3);
-INSERT INTO profesor(IdProfesor, Nume, Prenume, Email, Titlu, IdFacultate, IdAccount) VALUES (2, Varlan, Cosmin, cosmin.varlan@info.uaic.ro, Lect., 1, 2);
+INSERT INTO profesor(IdProfesor, Nume, Prenume, Email, Titlu, IdFacultate, IdAccount) VALUES (1, 'Buraga', 'Sabin', 'sabin.buraga@info.uaic.ro', 'Conf dr.', 1, 1);
+INSERT INTO profesor(IdProfesor, Nume, Prenume, Email, Titlu, IdFacultate, IdAccount) VALUES (2, 'Amariei', 'Ciprian', 'ciprian.amariei@info.uaic.ro', 'Prof', 1, 2);
+INSERT INTO profesor(IdProfesor, Nume, Prenume, Email, Titlu, IdFacultate, IdAccount) VALUES (3, 'Varlan', 'Cosmin', 'cosmin.varlan@info.uaic.ro', 'Lect.', 1, 3);

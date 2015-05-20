@@ -1,3 +1,7 @@
+INSERT INTO universitate VALUES(1,'Univ. Al. I. Cuza');
+
+INSERT INTO facultate VALUES(101,'Facultatea de Informatica', 1);
+
 INSERT INTO account(IdAccount, Username, Password, Tip) VALUES (1, 'sabin.buraga', 'sunt_sefu', 'P');
 INSERT INTO account(IdAccount, Username, Password, Tip) VALUES (2, 'ciprian.amariei', 'parola', 'P');
 INSERT INTO account(IdAccount, Username, Password, Tip) VALUES (3, 'cristian.farsianru', 'parola', 'P');
@@ -16,9 +20,7 @@ INSERT INTO profesor(IdProfesor, Nume, Prenume, Email, Titlu, IdFacultate, IdAcc
 INSERT INTO profesor(IdProfesor, Nume, Prenume, Email, Titlu, IdFacultate, IdAccount) VALUES (7, 'Gimbuta', 'Raluca', 'raluca.gimbuta@info.uaic.ro', 'Assist.', 1, 7);
 INSERT INTO profesor(IdProfesor, Nume, Prenume, Email, Titlu, IdFacultate, IdAccount) VALUES (8, 'Lazar', 'Lucian', 'lucian.lazar@info.uaic.ro', 'Assist.', 1, 8);
 
-INSERT INTO universitate VALUES(1,'Univ. Al. I. Cuza');
   
-INSERT INTO facultate VALUES(101,'Facultatea de Informatica', 1);
   
 INSERT INTO materie VALUES(1,'Algoritmi Genetici',NULL);
 INSERT INTO materie VALUES(2,'Limbaje formale, automate si compilatoare',NULL);

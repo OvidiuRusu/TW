@@ -1,3 +1,15 @@
+DROP TABLE Nota;
+DROP TABLE Submission;
+DROP TABLE Assignment;
+DROP TABLE Student_Materie;
+DROP TABLE Profesor_Materie;
+DROP TABLE Materie;
+DROP TABLE Profesor;
+DROP TABLE Student;
+DROP TABLE Account;
+DROP TABLE Facultate;
+DROP TABLE Universitate;
+
 CREATE TABLE Account(
   IdAccount INT(10) PRIMARY KEY,
   Username VARCHAR(25) UNIQUE,

@@ -334,10 +334,6 @@ h4 {
   opacity: 1;
 }
 
-#incorect{
-	color: #ff0000
-}
-
 /*BUTTONS*/
 
 input[type="file"] {
@@ -352,6 +348,81 @@ input[type="file"] {
     cursor: pointer;
 }
 
-/*Stud Course SGBD*/
+/*drop down menu*/
+.clearfix:after {
+    display:block;
+    clear:both;
+} 
 
+#clearfix {
+  float: right;
+  width: 100%;
+  margin: 0;
+  padding: 0px;
+  list-style: none;
+  background: #ccc;
+}
 
+#clearfix li {
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+
+#clearfix a {
+  float:left; 
+  display: block;
+  padding: 0.5em 2.5em 0.5em 1em;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 100%;
+  color: #73868c;
+}
+.menu {
+  width:770px;
+}
+
+.menu li {
+    margin:0px;
+    list-style:none;
+}
+ 
+.menu a {
+    transition:all linear 0.15s;
+    color:#919191;
+}
+
+.menu > ul > li {
+    float:left;
+    display:inline-block;
+    position:relative;
+    font-size:12px;
+}
+
+.menu > ul > li > a {
+    display:inline-block;
+}
+
+.menu li:hover .sub-menu {
+    z-index:1;
+    opacity:1;
+}
+ 
+.sub-menu {
+    width:120px;
+    padding:5px 0px;
+    position:absolute;
+    top:100%;
+    left:0px;
+    opacity:0;
+    background:#2e2728;
+}
+
+.sub-menu li {
+    display:block;
+}
+ 
+.sub-menu li a {
+    padding:10px 30px;
+    display:block;
+}

@@ -40,10 +40,10 @@
 			}
 			if($success==1){
 				if($tip=="P"){
-					echo '<META http-equiv="refresh" content="0;URL=http://localhost/test/profesorcourse.html">';
+					echo '<META http-equiv="refresh" content="0;URL=http://localhost/tw/profesorcourse.html">';
 				}
 				if($tip=="S"){
-					echo '<META http-equiv="refresh" content="0;URL=http://localhost/test/studentindex.html">';
+					echo '<META http-equiv="refresh" content="0;URL=http://localhost/tw/studentindex.html">';
 				}
 			}else{
 				?><strong id="incorect"><?php print "Cont sau parola incorecta.";

@@ -26,17 +26,30 @@
     </form>
 	
 	<?php
-		require_once ('clasabd.php');
-		$bd = new DataBase_MySQL ('localhost', 'TW', 'root', '');
-		$bd->connect(); 
-		$bd->query("select username,password from account;");
-		$success=0;
-		while ($bd->next_record()) {
-			if($bd->Record["username"]==$_REQUEST["user"] && $bd->Record["password"]==$_REQUEST["pass"]) $success=1;
+		if (isset($_REQUEST["user"]) and isset($_REQUEST["pass"])){
+			require_once('clasabd.php');
+			$bd = new DataBase_MySQL ('localhost', 'TW', 'root', '');
+			$bd->connect(); 
+			$bd->query("select username,password,tip from account;");
+			$success=0;
+			while ($bd->next_record()) {
+				if($bd->Record["username"]==$_REQUEST["user"] && $bd->Record["password"]==$_REQUEST["pass"]) {
+					$success=1;
+					$tip=$bd->Record["tip"];
+				}
+			}
+			if($success==1){
+				if($tip=="P"){
+					echo '<META http-equiv="refresh" content="0;URL=http://localhost/test/profesorcourse.html">';
+				}
+				if($tip=="S"){
+					echo '<META http-equiv="refresh" content="0;URL=http://localhost/test/studentindex.html">';
+				}
+			}else{
+				?><strong id="incorect"><?php print "Cont sau parola incorecta.";
+			}
 		}
-	?>
-	<br>
-	<strong><?php print $success; ?></strong>
+	?></strong>
 	
     <div class="login-help">
       <a href="#">Forgot Password?</a>

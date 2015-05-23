@@ -19,6 +19,7 @@
 </div>
 <div id="container">
     <ul id="nav">
+	  <li><a href="signup.html">Logout</a></li>
       <li><a href="#"><?php echo $username ?></a></li>
     </ul>
   <div id="contentleft">

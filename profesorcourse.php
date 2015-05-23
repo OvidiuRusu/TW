@@ -1,4 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
+<?php 
+  session_start();
+  if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
+    exit();
+  }
+  $username = $_SESSION['username'];
+?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +19,7 @@
 </div>
 <div id="container">
     <ul id="nav">
-      <li><a href="#">My Account</a></li>
+      <li><a href="#"><?php echo $username ?></a></li>
     </ul>
   <div id="contentleft">
     <ul id="nav2">
@@ -46,4 +53,7 @@
         </tr>
       </tbody>
     </table>
+  </div>
 </div>
+</body>
+</html>

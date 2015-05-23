@@ -13,7 +13,7 @@
   <div id="navcontainer">
     <ul id="nav">
       <li><a href="signup.html">Sign Up</a></li>
-      <li><a href="login.html">Login</a></li>
+      <li><a href="login.php">Login</a></li>
       <li><a href="index.html">How it Works</a></li>
     </ul>
   </div>

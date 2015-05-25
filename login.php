@@ -42,7 +42,7 @@
 				session_start();
 				$_SESSION['username'] = $_REQUEST["user"]; 
 				if($tip=="P") {					
-					header("Location: profesorcourse.php");
+					header("Location: profindex.php");
 				}
 				if($tip=="S"){
 					header("Location: studentindex.php");

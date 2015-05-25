@@ -1,12 +1,13 @@
 <?php
 session_start();
 include('connection.php');
- //nume prenume email facultate matricol username password
+rd
 $nume = $_POST['nume'];
 $prenume = $_POST['prenume'];
 $email = $_POST['email'];
 $fac = $_POST['facultate'];
 $matricol = $_POST['matricol'];
+$semestru = $_POST['sem'];
 $username = $_POST['username'];
 $password = $_POST['pass'];
  
@@ -30,11 +31,15 @@ if($matricol == '') {
 	$errmsg_arr[] = 'Nu ai introdus matricol';
 	$errflag = true;
 }
-if($email == '') {
+if($semestru == '') {
+	$errmsg_arr[] = 'Nu ai introdus semestrul';
+	$errflag = true;
+}
+if($username == '') {
 	$errmsg_arr[] = 'Nu ai introdus username';
 	$errflag = true;
 }
-if($email == '') {
+if($password == '') {
 	$errmsg_arr[] = 'Nu ai introdus parola';
 	$errflag = true;
 }
@@ -47,11 +52,12 @@ if($errflag) {
 $result = mysql_query("SELECT max(idaccount) AS maxid FROM account");
 $row = mysql_fetch_array($result);
 $newid = $row["maxid"] + 1;
+$result2 = mysql_query("SELECT max(idstudent) AS maxid FROM student");
+$row2 = mysql_fetch_array($result2);
+$newid2 = $row2["maxid"] + 1;
 mysql_query("INSERT INTO account VALUES ('$newid','$username','$password','S')");
+mysql_query("INSERT INTO student VALUES ('$newid2','$nume','$prenume','$email','$matricol','$semestru',101,'$newid')");
 
-/*$sql = "INSERT INTO members (fname,lname,age) VALUES (:sas,:asas,:asafs)";
-$q = $conn->prepare($sql);
-$q->execute(array(':sas'=>$fname,':asas'=>$lname,':asafs'=>$age));*/
 header("location: index.html");
 mysql_close($con);
 ?>

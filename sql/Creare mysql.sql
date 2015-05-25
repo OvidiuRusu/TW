@@ -1,3 +1,4 @@
+DROP TABLE Resource;
 DROP TABLE Nota;
 DROP TABLE Submission;
 DROP TABLE Assignment;
@@ -255,17 +256,26 @@ INSERT INTO profesor_materie VALUES(13,14);
 INSERT INTO profesor_materie VALUES(14,13);
 INSERT INTO profesor_materie VALUES(15,12);
 
-INSERT INTO Assignment VALUES(1,7,'Tema1', NULL, '15-FEB-15', '22-FEB-15', 100, 'res/Assignments/SGBD/Exercitii_lab1.pdf');
-INSERT INTO Assignment VALUES(2,7,'Tema2', NULL, '12-FEB-15', '1-MAR-15', 100, 'res/Assignments/SGBD/Exercitii_lab2.pdf');
-INSERT INTO Assignment VALUES(3,7,'Tema3', NULL, '1-MAR-15', '8-MAR-15', 100, 'res/Assignments/SGBD/Exercitii_lab3.pdf');
-INSERT INTO Assignment VALUES(4,7,'Tema4', NULL, '8-MAR-15', '15-MAR-15', 100, 'res/Assignments/SGBD/Exercitii_lab4.pdf');
-INSERT INTO Assignment VALUES(5,7,'Tema5', NULL, '15-MAR-15', '22-MAR-15', 100, 'res/Assignments/SGBD/Exercitii_lab5.pdf');
-INSERT INTO Assignment VALUES(6,7,'Tema6', NULL, '22-MAR-15', '29-MAR-15', 100, 'res/Assignments/SGBD/Exercitii_lab6.pdf');
-INSERT INTO Assignment VALUES(7,7,'Tema7', NULL, '29-MAR-15', '5-APR-15', 100, 'res/Assignments/SGBD/Exercitii_lab7.pdf');
-INSERT INTO Assignment VALUES(8,7,'Tema8', NULL, '5-ARP-15', '12-APR-15', 100, 'res/Assignments/SGBD/Exercitii_lab8.pdf');
-INSERT INTO Assignment VALUES(9,7,'Tema9', NULL, '12-ARP-15', '19-APR-15', 100, 'res/Assignments/SGBD/Exercitii_lab9.pdf');
-INSERT INTO Assignment VALUES(10,7,'Tema10', NULL, '19-ARP-15', '26-APR-15', 100, 'res/Assignments/SGBD/Exercitii_lab10.pdf');
+INSERT INTO Assignment VALUES(1,7,'Tema1', NULL, '15-FEB-15', '22-FEB-15', 100, 'res/SGBD/Assignments/Exercitii_lab1.pdf');
+INSERT INTO Assignment VALUES(2,7,'Tema2', NULL, '12-FEB-15', '1-MAR-15', 100, 'res/SGBD/Assignments/Exercitii_lab2.pdf');
+INSERT INTO Assignment VALUES(3,7,'Tema3', NULL, '1-MAR-15', '8-MAR-15', 100, 'res/SGBD/Assignments/Exercitii_lab3.pdf');
+INSERT INTO Assignment VALUES(4,7,'Tema4', NULL, '8-MAR-15', '15-MAR-15', 100, 'res/SGBD/Assignments/Exercitii_lab4.pdf');
+INSERT INTO Assignment VALUES(5,7,'Tema5', NULL, '15-MAR-15', '22-MAR-15', 100, 'res/SGBD/Assignments/Exercitii_lab5.pdf');
+INSERT INTO Assignment VALUES(6,7,'Tema6', NULL, '22-MAR-15', '29-MAR-15', 100, 'res/SGBD/Assignments/Exercitii_lab6.pdf');
+INSERT INTO Assignment VALUES(7,7,'Tema7', NULL, '29-MAR-15', '5-APR-15', 100, 'res/SGBD/Assignments/Exercitii_lab7.pdf');
+INSERT INTO Assignment VALUES(8,7,'Tema8', NULL, '5-ARP-15', '12-APR-15', 100, 'res/SGBD/Assignments/Exercitii_lab8.pdf');
+INSERT INTO Assignment VALUES(9,7,'Tema9', NULL, '12-ARP-15', '19-APR-15', 100, 'res/SGBD/Assignments/Exercitii_lab9.pdf');
+INSERT INTO Assignment VALUES(10,7,'Tema10', NULL, '19-ARP-15', '26-APR-15', 100, 'res/SGBD/Assignments/Exercitii_lab10.pdf');
 
 INSERT INTO Submission VALUES(1, 3, 1, 'res/SGBD/Submission/Rusu_Ovidiu_B4_1.zip');
 
 INSERT INTO Nota VALUES(1, 1, 8, 10);
+
+INSERT INTO Resource VALUES(1, 'Conditii si bucle', 7, 'res/SGBD/Resources/Conditii si bucle.pdf');
+INSERT INTO Resource VALUES(2, 'Variabile si blocuri', 7, 'res/SGBD/Resources/Variabile si blocuri.pdf');
+INSERT INTO Resource VALUES(3, 'Cursoare', 7, 'res/SGBD/Resources/Cursoare.pdf');
+INSERT INTO Resource VALUES(4, 'Proceduri stocate', 7, 'res/SGBD/Resources/Proceduri stocate.pdf');
+INSERT INTO Resource VALUES(5, 'Exceptii', 7, 'res/SGBD/Resources/Exceptii.pdf');
+INSERT INTO Resource VALUES(6, 'Dictionarul Oracle', 7, 'res/SGBD/Resources/Oracle Dictionary');
+INSERT INTO Resource VALUES(7, 'Conditii si bucle', 7, 'res/SGBD/Resources/Conditii si bucle.pdf');
+INSERT INTO Resource VALUES(8, 'Obiecte', 7, 'http://docs.oracle.com/cd/A97630_01/appdev.920/a96624/10_objs.htm');

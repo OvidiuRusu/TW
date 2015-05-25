@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <?php 
   session_start();
+  include('connection.php');
   if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
     exit();
   }
-  $username = $_SESSION['username'];
+  $username = $_SESSION['username'];  
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -28,26 +29,19 @@
       <li><a href="#">Catalog</a></li>
       <li><a href="studentcourselist.php">Course List</a></li>
     </ul>
-    <div class="coursebox">
-      <h3><a href="#">SGBD</a><h3>
+    <?php
+    $result = mysql_query("SELECT materie.Nume AS n, student_materie.StartDate AS d FROM materie JOIN student_materie ON materie.IdMaterie=student_materie.IdMaterie
+ JOIN student ON student_materie.IdStudent=student.IdStudent
+ JOIN account ON student.IdAccount=account.IdAccount
+ WHERE account.Username = '$username' AND student_materie.Status='In Curs'");
+    while($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+      echo '<div class="coursebox">
+      <h3><a href="#">',$line["n"],'</a><h3>
       <h4>Facultatea de Informatica</h4>
-      <h4>Started: 15 feb 2015<h4> 
-    </div>
-    <div class="coursebox">
-      <h3><a href="#">Programare Avansata</a><h3>
-      <h4>Facultatea de Informatica</h4>
-      <h4>Started: 15 feb 2015<h4> 
-    </div>
-    <div class="coursebox">
-      <h3><a href="#">Ingineria Programarii</a><h3>
-      <h4>Facultatea de Informatica</h4>
-      <h4>Started: 15 feb 2015<h4> 
-    </div>
-    <div class="coursebox">
-      <h3><a href="#">Programare Logica</a><h3>
-      <h4>Facultatea de Informatica</h4>
-      <h4>Started: 15 feb 2015<h4> 
-    </div>
+      <h4>Started: ' ,$line["d"],'<h4> 
+    </div>';
+    }
+    ?>
   </div>
   <div id="contentright">
     <h2>Assignments Deadlines</h2>

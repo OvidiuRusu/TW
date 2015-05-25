@@ -111,6 +111,14 @@ CREATE TABLE Nota(
   FOREIGN KEY(IdSubmission) REFERENCES Submission(IdSubmission)
   ) ENGINE=INNODB;
 
+CREATE TABLE Resource(
+  IdResursa INT(10) PRIMARY KEY,
+  Nume VARCHAR(50) NOT NULL,
+  IdMaterie INT(10) NOT NULL,
+  Path VARCHAR(255),
+  FOREIGN KEY(IdMaterie) REFERENCES Materie(IdMaterie)
+  ) ENGINE=INNODB;
+
 INSERT INTO universitate VALUES(1,'Univ. Al. I. Cuza');
 
 INSERT INTO facultate VALUES(101,'Facultatea de Informatica', 1);

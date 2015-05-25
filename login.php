@@ -40,12 +40,12 @@
 			}
 			if($success==1){
 				session_start();
-				if($tip=="P"){
-					echo '<META http-equiv="refresh" content="0;URL=http://localhost/tw/profesorcourse.php">';
-					$_SESSION['username'] = $_REQUEST["user"]; 
+				$_SESSION['username'] = $_REQUEST["user"]; 
+				if($tip=="P") {					
+					header("Location: profesorcourse.php");
 				}
 				if($tip=="S"){
-					echo '<META http-equiv="refresh" content="0;URL=http://localhost/tw/studentindex.html">';
+					header("Location: studentindex.php");
 				}
 			}else{
 				?><strong id="incorect"><?php print "Cont sau parola incorecta.";

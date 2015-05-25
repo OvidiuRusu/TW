@@ -21,7 +21,7 @@
 <div id="container">
     <ul id="nav">
       <li><a href="index.html">Logout</a></li>
-      <li><a href="studentindex.php"><?php echo $username ?></a></li>
+      <li><a href="#"><?php echo $username ?></a></li>
     </ul>
   <div id="contentleft">
     <ul id="nav2">

@@ -124,6 +124,7 @@ INSERT INTO account VALUES (6, 'florin.iacob', 'parola', 'P');
 INSERT INTO account VALUES (7, 'raluca.gimbuta', 'parola', 'P');
 INSERT INTO account VALUES (8, 'lucian.lazar', 'parola', 'P');
 INSERT INTO account VALUES (9, 'stefan.luchian', 'parola', 'P');
+INSERT INTO account VALUES (10, 'lenuta.alboaie', 'parola', 'P');
 INSERT INTO account VALUES (11, 'emilian.mitocariu', 'ps', 'S');
 INSERT INTO account VALUES (12, 'vlad.tacutanu', 'ps', 'S');
 INSERT INTO account VALUES (13, 'ovidiu.rusu', 'ps', 'S');
@@ -138,7 +139,7 @@ INSERT INTO profesor VALUES (6, 'Iacob', 'Florin', 'florin.iacob@info.uaic.ro', 
 INSERT INTO profesor VALUES (7, 'Gimbuta', 'Raluca', 'raluca.gimbuta@info.uaic.ro', 'Assist.', 101, 7);
 INSERT INTO profesor VALUES (8, 'Lazar', 'Lucian', 'lucian.lazar@info.uaic.ro', 'Assist.', 101, 8);
 INSERT INTO profesor VALUES (9, 'Luchian', 'Stefan', 'stefan.luchian@info.uaic.ro', 'Assist.', 101, 9);
-
+INSERT INTO profesor VALUES (10, 'Lenuta', 'Alboaie', 'lenuta.alboaie@info.uaic.ro', 'Assist.', 101, 10);
   
   
 INSERT INTO materie VALUES(1,'Algoritmi Genetici',3,NULL);

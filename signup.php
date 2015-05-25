@@ -33,6 +33,7 @@ session_start();
       <input type="text" name="facultate" placeholder="Facultate">
 
       <input type="text" name="matricol" placeholder="Numar matricol">
+      <input type="text" name="sem" placeholder="Semestru">
       <input type="text" name="username" placeholder="Username">
       <input type="password" name="pass" placeholder="Password">
       <input type="submit" name="signup" class="login login-submit" value="Sign up">

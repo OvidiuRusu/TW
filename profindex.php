@@ -34,7 +34,7 @@
 								JOIN account ON profesor.IdAccount=account.IdAccount WHERE account.Username = '$username';");
     while($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
 	?>
-		<li><h3><a href="#"><?php print $line["n"]?></a></li></h3>
+		<li><h3><a href="profesorcourse.php"><?php print $line["n"]?></a></li></h3>
     <?php }?>
   	</ul>
   </div>  		  

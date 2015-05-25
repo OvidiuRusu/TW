@@ -21,9 +21,8 @@
 <div id="container">
 	<div id="navcontainer">
     <ul id="nav">
-      <li id="nav-1"><a href="index.html">ProfName</a></li>
-      <li id="nav-2"><a href="login.html">My Courses</a></li>
-      <li id="nav-3"><a href="#">Courses List</a></li>
+      <li id="nav-1"><a href="index.html">Logout</a></li>
+      <li id="nav-2"><a href="#"><?php echo $username?></a></li>
     </ul>
   </div>
   <div id="courses">

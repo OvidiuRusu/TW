@@ -12,7 +12,7 @@
 <div id="container">
   <div id="navcontainer">
     <ul id="nav">
-      <li><a href="signup.html">Sign Up</a></li>
+      <li><a href="signup.php">Sign Up</a></li>
       <li><a href="login.php">Login</a></li>
       <li><a href="index.html">How it Works</a></li>
     </ul>
@@ -48,10 +48,10 @@
 					header("Location: studentindex.php");
 				}
 			}else{
-				?><strong id="incorect"><?php print "Cont sau parola incorecta.";
+				echo '<strong> Cont sau parola incorecta </strong>'; 
 			}
 		}
-	?></strong>
+	?>
 	
     <div class="login-help">
       <a href="#">Forgot Password?</a>

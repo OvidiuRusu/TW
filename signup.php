@@ -1,4 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
+<?php
+session_start();
+?>
+
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <title>Student Login</title>
@@ -12,7 +16,7 @@
 <div id="container">
   <div id="navcontainer">
     <ul id="nav">
-      <li><a href="signup.html">Sign Up</a></li>
+      <li><a href="signup.php">Sign Up</a></li>
       <li><a href="login.php">Login</a></li>
       <li><a href="index.html">How it Works</a></li>
     </ul>
@@ -20,7 +24,7 @@
 <div id="content">
 
   <div class="login-card">
-    <form>
+    <form action="reg.php" method="post">
       <input type="text" name="nume" placeholder="Nume">
       <input type="text" name="prenume" placeholder="Prenume">
       <input type="text" name="email" placeholder="Email">
@@ -33,6 +37,14 @@
       <input type="password" name="pass" placeholder="Password">
       <input type="submit" name="signup" class="login login-submit" value="Sign up">
     </form>
+      <?php
+if(isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) &&  count($_SESSION['ERRMSG_ARR']) >0 ) {
+  foreach($_SESSION['ERRMSG_ARR'] as $msg) {
+    echo '<p style="color: red">',$msg,'</p>'; 
+  }
+  unset($_SESSION['ERRMSG_ARR']);
+}
+?>
   </div>
 </div>
 </div>

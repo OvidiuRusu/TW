@@ -24,55 +24,25 @@
     </ul>
   <div id="contentleft">
     <ul id="nav2">
-      <li><a href="#" style="color: #000;">Active Courses</a></li>
+      <li><a href="studentindex.html">Active Courses</a></li>
       <li><a href="#">Catalog</a></li>
-      <li><a href="studentcourselist.php">Course List</a></li>
+      <li><a href="#" style="color: #000;">Course List</a></li>
     </ul>
     <div class="coursebox">
-      <h3><a href="#">SGBD</a><h3>
+      <h3 class="optionale">Limbajul C++<h3>
       <h4>Facultatea de Informatica</h4>
-      <h4>Started: 15 feb 2015<h4> 
+      <h4>Vei avea ocazia sa descoperi noi concepte la un nivel mai avansat.<h4> 
     </div>
     <div class="coursebox">
-      <h3><a href="#">Programare Avansata</a><h3>
+      <h3 class="optionale">Limbajul .NET<h3>
       <h4>Facultatea de Informatica</h4>
-      <h4>Started: 15 feb 2015<h4> 
+      <h4>Acumularea de cunostinte medii in limbajul .NET. Un curs foarte interesant cu exemple practice.<h4> 
     </div>
     <div class="coursebox">
-      <h3><a href="#">Ingineria Programarii</a><h3>
-      <h4>Facultatea de Informatica</h4>
-      <h4>Started: 15 feb 2015<h4> 
+      <h3 class="optionale">Economie informatica<h3>
+      <h4>Facultatea de Economie</h4>
+      <h4>Aspectele economice ale informaticii si modul in care functioneaza o afacere pe domeniul IT.<h4> 
     </div>
-    <div class="coursebox">
-      <h3><a href="#">Programare Logica</a><h3>
-      <h4>Facultatea de Informatica</h4>
-      <h4>Started: 15 feb 2015<h4> 
-    </div>
-  </div>
-  <div id="contentright">
-    <h2>Assignments Deadlines</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Due Date</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>SGBD_Tema8</strong></td>
-          <td>25 apr 2015</td>
-        </tr>
-        <tr>
-          <td><strong>PA_Tema7</strong></td>
-          <td>26 apr 2015</td>
-        </tr>
-        <tr>
-          <td><strong>PL_Tema7</strong></td>
-          <td>28 apr 2015</td>
-        </tr>
-      </tbody>
-    </table>
   </div>
 <!-- <div id="footer">
   <div id="bottomlinks">

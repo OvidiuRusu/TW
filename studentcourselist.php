@@ -24,7 +24,7 @@
     </ul>
   <div id="contentleft">
     <ul id="nav2">
-      <li><a href="studentindex.html">Active Courses</a></li>
+      <li><a href="studentindex.php">Active Courses</a></li>
       <li><a href="#">Catalog</a></li>
       <li><a href="#" style="color: #000;">Course List</a></li>
     </ul>

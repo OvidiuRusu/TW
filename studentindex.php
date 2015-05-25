@@ -21,11 +21,11 @@
 <div id="container">
     <ul id="nav">
       <li><a href="index.html">Logout</a></li>
-      <li><a href="#"><?php echo $username ?></a></li>
+      <li><a href="studentindex.php"><?php echo $username ?></a></li>
     </ul>
   <div id="contentleft">
     <ul id="nav2">
-      <li><a href="#" style="color: #000;">Active Courses</a></li>
+      <li><a href="studentindex.php" style="color: #000;">Active Courses</a></li>
       <li><a href="#">Catalog</a></li>
       <li><a href="studentcourselist.php">Course List</a></li>
     </ul>
@@ -36,7 +36,7 @@
  WHERE account.Username = '$username' AND student_materie.Status='In Curs'");
     while($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
       echo '<div class="coursebox">
-      <h3><a href="#">',$line["n"],'</a><h3>
+      <h3><a href="studentcourse.php?name=',$line["n"],'">',$line["n"],'</a><h3>
       <h4>Facultatea de Informatica</h4>
       <h4>Started: ' ,$line["d"],'<h4> 
     </div>';

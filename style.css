@@ -69,6 +69,14 @@ body {
   padding: 0 1em 1em 1em;
 }
 
+#studcoursetitle {
+  float: left;
+  margin-top: 10px;
+  width: 700px;
+  height: 20px;
+  padding: 0 1em 1em 1em;
+}
+
 .number {
   background: #ccc;
   padding: .6% 3%;
@@ -244,6 +252,12 @@ h2 {
 #res{
   font-family: helvetica, Verdana, Arial;
   font-size: 18px;
+  padding-left: 40px;
+}
+#res2{
+  font-family: helvetica, Verdana, Arial;
+  font-size: 18px;
+  text-align: center;
 }
 
 h3 a{
@@ -256,10 +270,6 @@ h3 a:hover {
   color : blue;
   background : inherit;
   text-decoration: none;
-}
-
-#res {
-  padding-left: 40px;
 }
 
 h4 {

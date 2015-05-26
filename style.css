@@ -363,9 +363,6 @@ h4 {
 
 /*BUTTONS*/
 
-input[type="file"] {
-    display: none;
-}
 .custom-file-upload {
   margin-top: 10px;
   margin-left: 53px;

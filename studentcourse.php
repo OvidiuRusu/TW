@@ -54,9 +54,11 @@
         <tr>
       </tbody>
     </table>
-    <label class="custom-file-upload">
-      <input type="file"/>Upload
-    </label>    
+	<form action="getfile.php" method="post" enctype='multipart/form-data'><br>
+		<input type="file" name="uploadFile">
+		<input type="submit"  name="submit" value="Upload File">
+	</form>
+	
   </div>
   <div id="contentright">
     <h3 id="res">Resources</h3>

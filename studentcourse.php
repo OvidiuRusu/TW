@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <?php 
   session_start();
+  include('connection.php');
   if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
     exit();
   }
-  $username = $_SESSION['username'];  
+  $username = $_SESSION['username'];
+  $numemat=$_GET["name"];
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Course Page</title>
+<title><?php echo $numemat?></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
@@ -23,7 +25,7 @@
       <li><a href="studentindex.php"><?php echo $username ?></a></li>
     </ul>
     <div id="studcoursetitle">
-      <h3 id="res2"><?php echo $_GET["name"]?></h3>
+      <h3 id="res2"><?php echo $numemat?></h3>
     </div>
   <div id="contentleft">    
     <ul id="nav2">
@@ -39,19 +41,18 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td><strong>Tema1</strong></td>
-          <td>25 apr 2015</td>
+	  <?php
+		$result = mysql_query("select assignment.titlu as t,assignment.path as p,assignment.duedate as d
+			from assignment JOIN materie ON materie.IdMaterie=assignment.IdMaterie 
+			where materie.nume='$numemat';");
+		while($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+	  ?>
+		<tr>
+          <td><a href="<?php print $line["p"]?>"><strong><?php print $line["t"]?></strong></a></td>
+          <td><?php print $line["d"]?></td>
         </tr>
-        <tr>
-          <td><strong>Tema2</strong></td>
-          <td>26 apr 2015</td>
-        </tr>
-        <tr>
-          <td><strong>Tema3</strong></td>
-          <td>28 apr 2015</td>
-        </tr>
-        <tr>
+    <?php }?>
+    
       </tbody>
     </table>
 	<form action="getfile.php" method="post" enctype='multipart/form-data'><br>
@@ -63,12 +64,14 @@
   <div id="contentright">
     <h3 id="res">Resources</h3>
     <ul id="resources">
-      <li><a href="#">Pachete</a></li>
-      <li><a href="#">Obiecte</a></li>
-      <li><a href="#">SQL dinamic</a></li>
-      <li><a href="#">Proceduri Stocate</a></li>
-      <li><a href="#">Cursoare explicite</a></li>
-      <li><a href="#">Exceptii</a></li>
+	<?php
+		$result = mysql_query("select resource.nume as n,resource.path as p 
+			from resource JOIN materie ON materie.IdMaterie=resource.IdMaterie 
+			where materie.nume='$numemat';");
+		while($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+	?>
+		<li><a href="<?php print $line["p"]?>"><?php print $line["n"]?></a></li>
+    <?php }?>
     </ul>  
   </div>
 </div>

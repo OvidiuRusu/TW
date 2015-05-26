@@ -53,13 +53,13 @@ and account.Username = '$username') AS B
 ON A.id = B.id
 ORDER BY due;");
 		while($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
-	  ?>
-		<tr>
-          <td><a href="<?php print $line["path"]?>"><strong><?php print $line["titlu"]?></strong></a></td>
-          <td><?php print $line["due"]?></td>
-          <td><?php print $line["nota"]?></td>
-        </tr>
-    <?php }?>
+		echo '<tr>
+          <td><a href="',$line["path"],'"><strong>',$line["titlu"],'</strong></a></td>
+          <td>',$line["due"],'</td>
+          <td>',$line["nota"],'</td>
+        </tr>';
+         }
+         ?>
     
       </tbody>
     </table>

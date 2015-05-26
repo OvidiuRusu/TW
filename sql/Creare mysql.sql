@@ -268,8 +268,15 @@ INSERT INTO Assignment VALUES(9,7,'Tema9', NULL, '2015-04-12', '2015-04-19', 100
 INSERT INTO Assignment VALUES(10,7,'Tema10', NULL, '2015-04-19', '2015-04-26', 100, 'res/SGBD/Assignments/Exercitii_lab10.pdf');
 
 INSERT INTO Submission VALUES(1, 3, 1, 'res/SGBD/Submission/Rusu_Ovidiu_B4_1.zip');
+--+niste submission-uri si note de test
+INSERT INTO Submission VALUES(2, 3, 4, NULL);
+INSERT INTO Submission VALUES(3, 3, 5, NULL);
+INSERT INTO Submission VALUES(4, 3, 6, NULL);
 
 INSERT INTO Nota VALUES(1, 1, 8, 10);
+INSERT INTO Nota VALUES(2, 2, 8, 8);
+INSERT INTO Nota VALUES(3, 3, 8, 10);
+INSERT INTO Nota VALUES(4, 4, 8, 10);
 
 INSERT INTO Resource VALUES(1, 'Conditii si bucle', 7, 'res/SGBD/Resources/Conditii si bucle.pdf');
 INSERT INTO Resource VALUES(2, 'Variabile si blocuri', 7, 'res/SGBD/Resources/Variabile si blocuri.pdf');

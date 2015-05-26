@@ -27,7 +27,7 @@
   <div id="contentleft">
     <ul id="nav2">
       <li><a href="#" style="color: #000;">Assigments</a></li>
-      <li><a href="profgrades.php">Grades</a></li>
+      <li><a href="profgrades.php">Catalog</a></li>
       <li><a href="#">Reports</a></li>
     </ul>  
     <table>

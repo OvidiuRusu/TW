@@ -28,28 +28,36 @@
       <h3 id="res2"><?php echo $numemat?></h3>
     </div>
   <div id="contentleft">    
-    <ul id="nav2">
-      <li><a href="#" style="color: #000;">Assigments</a></li>
-      <li><a href="#">Grades</a></li>
-      <li><a href="#">Reports</a></li>
-    </ul>  
     <table>
       <thead>
         <tr>
           <th>Name</th>
           <th>Deadline</th>
+          <th>Nota</th>
         </tr>
       </thead>
       <tbody>
 	  <?php
-		$result = mysql_query("select assignment.titlu as t,assignment.path as p,assignment.duedate as d
-			from assignment JOIN materie ON materie.IdMaterie=assignment.IdMaterie 
-			where materie.nume='$numemat';");
+		$result = mysql_query("SELECT A.t as titlu, A.p as path, A.d as due, B.n as nota FROM (select assignment.IdAssignment as id, assignment.titlu as t,assignment.path as p,assignment.duedate as d
+from assignment JOIN materie ON materie.IdMaterie=assignment.IdMaterie 
+where materie.nume='$numemat') AS A
+LEFT JOIN
+ (select assignment.IdAssignment as id, nota.Nota as n from assignment
+JOIN materie ON materie.IdMaterie=assignment.IdMaterie
+JOIN submission ON submission.IdAssignment = assignment.IdAssignment
+Join nota on submission.IdSubmission = nota.IdSubmission
+join student on submission.IdStudent = student.IdStudent
+join account on student.IdAccount = account.IdAccount
+where materie.nume='$numemat'
+and account.Username = '$username') AS B
+ON A.id = B.id
+ORDER BY due;");
 		while($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
 	  ?>
 		<tr>
-          <td><a href="<?php print $line["p"]?>"><strong><?php print $line["t"]?></strong></a></td>
-          <td><?php print $line["d"]?></td>
+          <td><a href="<?php print $line["path"]?>"><strong><?php print $line["titlu"]?></strong></a></td>
+          <td><?php print $line["due"]?></td>
+          <td><?php print $line["nota"]?></td>
         </tr>
     <?php }?>
     

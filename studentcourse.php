@@ -7,6 +7,7 @@
   }
   $username = $_SESSION['username'];
   $numemat=$_GET["name"];
+  $_SESSION['numemat']=$numemat;
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -64,7 +65,8 @@ ORDER BY due;");
     
       </tbody>
     </table>
-	<form action="getfile.php" method="post" enctype='multipart/form-data'><br>
+	<form action="uploadstud.php" method="post" enctype='multipart/form-data'><br>
+		Numar Tema:<input type="text" name="nrtema"><br>
 		<input type="file" name="uploadFile">
 		<input type="submit"  name="submit" value="Upload File">
 	</form>

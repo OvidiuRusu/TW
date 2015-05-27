@@ -7,6 +7,7 @@
   }
   $username = $_SESSION['username'];
   $numemat=$_GET["name"];
+  $_SESSION['numemat']=$numemat;
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -52,9 +53,13 @@
       
       </tbody>
     </table>
-    <label class="custom-file-upload">
-      <input type="file"/>Add Assignment
-    </label>
+    <form action="uploadprofassign.php" method="post" enctype='multipart/form-data'><br>
+		Due date(format yyyy-mm-dd):<input type="text" name="duedate"><br>
+		Descriere:<input type="text" name="descriere" size="50"><br>
+		Punctaj:<input type="text" name="punctaj"><br>
+		<input type="file" name="uploadFile">
+		<input type="submit"  name="submit" value="Upload File">
+	</form>
   </div>
   <div id="contentright">
     <h3 id="res">Resources</h3>
@@ -68,9 +73,11 @@
 		<li><a href="<?php print $line["p"]?>"><?php print $line["n"]?></a></li>
     <?php }?>
     </ul>  
-  <label class="resource-upload">
-      <input type="file"/>Upload
-  </label>
+  <form action="uploadprofcurs.php" method="post" enctype='multipart/form-data'><br>
+		Titlu:<input type="text" name="nume"><br>
+		<input type="file" name="uploadFile">
+		<input type="submit"  name="submit" value="Upload File">
+	</form>
   </div>
 </div>
 </body>

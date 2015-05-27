@@ -284,6 +284,6 @@ INSERT INTO Resource VALUES(2, 'Variabile si blocuri', 7, 'res/SGBD/Resources/Va
 INSERT INTO Resource VALUES(3, 'Cursoare', 7, 'res/SGBD/Resources/Cursoare.pdf');
 INSERT INTO Resource VALUES(4, 'Proceduri stocate', 7, 'res/SGBD/Resources/Proceduri stocate.pdf');
 INSERT INTO Resource VALUES(5, 'Exceptii', 7, 'res/SGBD/Resources/Exceptii.pdf');
-INSERT INTO Resource VALUES(6, 'Dictionarul Oracle', 7, 'res/SGBD/Resources/Oracle Dictionary');
+INSERT INTO Resource VALUES(6, 'Dictionarul Oracle', 7, 'res/SGBD/Resources/Oracle Dictionary.pdf');
 INSERT INTO Resource VALUES(7, 'Conditii si bucle', 7, 'res/SGBD/Resources/Conditii si bucle.pdf');
 INSERT INTO Resource VALUES(8, 'Obiecte', 7, 'http://docs.oracle.com/cd/A97630_01/appdev.920/a96624/10_objs.htm');

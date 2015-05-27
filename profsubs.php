@@ -30,20 +30,22 @@
       <li><a href="#" style="color: #000;">Submissions</a></li>
       <li><a href="#">Catalog</a></li>
     </ul>  
-    <table style="width: 400px; margin-left: 5px;">
+    <table style="width: 500px; margin-left: 5px;">
       <thead>
         <tr>
           <th>Assignment</th>
           <th>Nume Student</th>
           <th>Fisier</th>
+          <th>Graded</th>
         </tr>
       </thead>
       <tbody>
 	  <?php
 		$result = mysql_query("SELECT student.Nume as nume, student.Prenume as prenume,
-        assignment.Titlu as titlu, submission.Data, submission.Path as path
+        assignment.Titlu as titlu, submission.Path as path, nota.Nota as nota
         FROM student join submission on student.IdStudent = submission.IdStudent
         JOIN assignment on submission.IdAssignment = assignment.IdAssignment
+        LEFT JOIN nota on submission.IdSubmission = nota.IdSubmission
         WHERE submission.Data < assignment.DueDate
         ORDER BY submission.Data DESC;");
 		while($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
@@ -51,15 +53,17 @@
 	  echo '<tr>
         <td>',$line["titlu"],'</td>
         <td>',$line["nume"],' ',$line["prenume"],'</td>
-        <td><a href="',$line["path"],'">',$den,'</a></td>
-      </tr>';
+        <td><a href="',$line["path"],'">',$den,'</a></td>';
+    if(!is_null($line['nota']))
+      echo '<td>',"&#10003;",'</td>';
+    echo '</tr>';
       }
       ?>
       
       </tbody>
     </table>
 
-    <!-- adaugare formular pentru inserare note in contentright-->
+    <!-- adaugare formular pentru inserare note in contentright &#10003; -->
   </div>
 </div>
 </body>

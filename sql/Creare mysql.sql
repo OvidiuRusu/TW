@@ -272,6 +272,7 @@ INSERT INTO Submission VALUES(1, 3, 1,'2015-02-20', 'res/SGBD/Submissions/Rusu_O
 INSERT INTO Submission VALUES(2, 2, 4,'2015-03-14', 'res/SGBD/Submissions/Vlad_Tacutanu_T4.txt');
 INSERT INTO Submission VALUES(3, 2, 5,'2015-03-16', 'res/SGBD/Submissions/Vlad_Tacutanu_T5.txt');
 INSERT INTO Submission VALUES(4, 2, 6,'2015-03-26', 'res/SGBD/Submissions/Vlad_Tacutanu_T6.txt');
+INSERT INTO Submission VALUES(5, 2, 7,'2015-04-01', 'res/SGBD/Submissions/Vlad_Tacutanu_T7.sql');
 
 INSERT INTO Nota VALUES(1, 1, 8, 10);
 INSERT INTO Nota VALUES(2, 2, 8, 8);

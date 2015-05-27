@@ -37,6 +37,7 @@
         </tr>
       </thead>
       <tbody>
+        
 	  <?php
 		$result = mysql_query("SELECT A.t as titlu, A.p as path, A.d as due, B.n as nota FROM (select assignment.IdAssignment as id, assignment.titlu as t,assignment.path as p,assignment.duedate as d
 from assignment JOIN materie ON materie.IdMaterie=assignment.IdMaterie 

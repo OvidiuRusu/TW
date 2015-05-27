@@ -48,23 +48,23 @@
     <table>
       <thead>
         <tr>
+          <th>Course</th>
           <th>Name</th>
           <th>Due Date</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td><strong>SGBD_Tema8</strong></td>
-          <td>25 apr 2015</td>
-        </tr>
-        <tr>
-          <td><strong>PA_Tema7</strong></td>
-          <td>26 apr 2015</td>
-        </tr>
-        <tr>
-          <td><strong>PL_Tema7</strong></td>
-          <td>28 apr 2015</td>
-        </tr>
+        <?php
+    $result = mysql_query("SELECT assignment.Titlu AS titlu, assignment.DueDate AS due, materie.Nume AS name 
+      FROM assignment JOIN materie ON assignment.IdMaterie = materie.IdMaterie WHERE assignment.DueDate < '2015-03-19';");
+    while($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+    echo '<tr>
+          <td>',$line["name"],'</td>
+          <td>',$line["titlu"],'</td>
+          <td>',$line["due"],'</td>
+        </tr>';
+         }
+         ?>
       </tbody>
     </table>
   </div>

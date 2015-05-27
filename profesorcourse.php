@@ -27,15 +27,14 @@
   <div id="contentleft">
     <ul id="nav2">
       <li><a href="#" style="color: #000;">Assigments</a></li>
-      <li><a href="profgrades.php">Catalog</a></li>
-      <li><a href="#">Reports</a></li>
+      <li><a href="profsubs.php?name=<?php print $numemat?>">Submissions</a></li>
+      <li><a href="#">Catalog</a></li>
     </ul>  
     <table>
       <thead>
         <tr>
           <th>Name</th>
           <th>Deadline</th>
-          <th>Subs</th>
         </tr>
       </thead>
       <tbody>
@@ -48,7 +47,6 @@
 		<tr>
           <td><a href="<?php print $line["p"]?>"><strong><?php print $line["t"]?></strong></a></td>
           <td><?php print $line["d"]?></td>
-		  <td>21/25</td>
         </tr>
     <?php }?>
       

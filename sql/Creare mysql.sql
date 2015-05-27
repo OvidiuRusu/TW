@@ -98,6 +98,7 @@ CREATE TABLE Submission(
   IdSubmission INT(10) PRIMARY KEY,
   IdStudent INT(10) NOT NULL,
   IdAssignment INT(10) NOT NULL,
+  Data DATE NOT NULL,
   Path VARCHAR(255),
   FOREIGN KEY(IdStudent) REFERENCES Student(IdStudent),
   FOREIGN KEY(IdAssignment) REFERENCES Assignment(IdAssignment)
@@ -267,11 +268,10 @@ INSERT INTO Assignment VALUES(8,7,'Tema8', NULL, '2015-04-05', '2015-04-12', 100
 INSERT INTO Assignment VALUES(9,7,'Tema9', NULL, '2015-04-12', '2015-04-19', 100, 'res/SGBD/Assignments/Exercitii_lab9.pdf');
 INSERT INTO Assignment VALUES(10,7,'Tema10', NULL, '2015-04-19', '2015-04-26', 100, 'res/SGBD/Assignments/Exercitii_lab10.pdf');
 
-INSERT INTO Submission VALUES(1, 3, 1, 'res/SGBD/Submission/Rusu_Ovidiu_B4_1.zip');
---+niste submission-uri si note de test
-INSERT INTO Submission VALUES(2, 3, 4, NULL);
-INSERT INTO Submission VALUES(3, 3, 5, NULL);
-INSERT INTO Submission VALUES(4, 3, 6, NULL);
+INSERT INTO Submission VALUES(1, 3, 1,'2015-02-20', 'res/SGBD/Submissions/Rusu_Ovidiu_T1.zip');
+INSERT INTO Submission VALUES(2, 2, 4,'2015-03-14', 'res/SGBD/Submissions/Vlad_Tacutanu_T4.txt');
+INSERT INTO Submission VALUES(3, 2, 5,'2015-03-16', 'res/SGBD/Submissions/Vlad_Tacutanu_T5.txt');
+INSERT INTO Submission VALUES(4, 2, 6,'2015-03-26', 'res/SGBD/Submissions/Vlad_Tacutanu_T6.txt');
 
 INSERT INTO Nota VALUES(1, 1, 8, 10);
 INSERT INTO Nota VALUES(2, 2, 8, 8);

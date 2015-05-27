@@ -35,7 +35,7 @@
         <tr>
           <th>Name</th>
           <th>Deadline</th>
-          <th>Submissions</th>
+          <th>Subs</th>
         </tr>
       </thead>
       <tbody>

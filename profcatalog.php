@@ -30,46 +30,21 @@
       <li><a href="profsubs.php?name=<?php print $numemat?>">Submissions</a></li>
       <li><a href="#" style="color: #000;">Catalog</a></li>
     </ul>  
-    <table style="width: 700px; margin-left: 5px;">
+    <table style="margin-left: 5px">
       <thead>
         <tr>
-          <th>Assignment</th>
           <th>Nume Student</th>
-          <th>Fisier</th>
-          <th>Graded</th>
-          <th>Nota</th>
+          <?php
+          $result = mysql_query("SELECT assignment.titlu as nume FROM assignment JOIN materie on assignment.idmaterie = materie.idmaterie WHERE materie.nume='$numemat'");
+          while($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+            echo '<th>',$line["nume"],'</th>';
+          }
+            ?>
       </thead>
       <tbody>
-	  <?php
-		$result = mysql_query("SELECT  submission.idSubmission as idsub, student.Nume as nume, student.Prenume as prenume,
-        assignment.Titlu as titlu, submission.Path as path, nota.Nota as nota
-        FROM student join submission on student.IdStudent = submission.IdStudent
-        JOIN assignment on submission.IdAssignment = assignment.IdAssignment
-        LEFT JOIN nota on submission.IdSubmission = nota.IdSubmission
-        WHERE submission.Data < assignment.DueDate
-        ORDER BY submission.Data DESC;");
-		while($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
-        $den = end(explode('/', $line["path"]));
-	  echo '<tr>
-        <td>',$line["titlu"],'</td>
-        <td>',$line["nume"],' ',$line["prenume"],'</td>
-        <td><a href="',$line["path"],'">',$den,'</a></td>';
-    if(!is_null($line['nota']))
-      echo '<td>',"&#10003;",'</td>';
-      $idsub = $line["idsub"];
-      echo '<td><form action="addnota.php method="post">
-    <input type="text" size="1" name="nota">    
-    <input type="submit" name="submit" value="Add">
-    <input type="hidden" name="idsub" value=',$line["idsub"],'>
-  </form></td>';
-    echo '</tr>';
-      }
-      //?id=',$line["idsub"],' 
-      ?>
+        
       </tbody>
     </table>
-
-    <!-- adaugare formular pentru inserare note in contentright &#10003; -->
   </div>
 </div>
 </body>

@@ -176,6 +176,7 @@ td {
   padding: 10px 15px;
   position: relative;
 }
+
 /*Profesor Index*/
 
 #courses{
@@ -419,7 +420,7 @@ input[type=text]:focus {
   border-radius: 5px; 
 }
 
-#submit-upload {
+.submit-upload {
   margin-top: 5px;
   padding:5px 15px; background:#ccc; border:0 none;
   cursor:pointer;
@@ -427,8 +428,11 @@ input[type=text]:focus {
   border-radius: 5px; 
 }
 
-.formular{
+#contentright form{
+  width: 250px;
+}
+
+#contentleft form{
   width: 250px;
   margin-left: 52px;
 }
-

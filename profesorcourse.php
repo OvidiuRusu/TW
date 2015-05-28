@@ -53,12 +53,12 @@
       
       </tbody>
     </table>
-    <form action="uploadprofassign.php" method="post" enctype='multipart/form-data'><br>
-		Due date(format yyyy-mm-dd):<input type="text" name="duedate"><br>
-		Descriere:<input type="text" name="descriere" size="50"><br>
-		Punctaj:<input type="text" name="punctaj"><br>
-		<input type="file" name="uploadFile">
-		<input type="submit"  name="submit" value="Upload File">
+    <form action="uploadprofassign.php" method="post" enctype='multipart/form-data'>
+		  Due date(format yyyy-mm-dd) <input type="text" name="duedate"><br>
+		  Descriere <br><input type="text" name="descriere"><br>
+		  Punctaj <br><input type="text" name="punctaj">
+		  <input type="file" name="uploadFile" class="file-upload">
+		  <input type="submit"  name="submit" value="Upload File" class="submit-upload">
 	</form>
   </div>
   <div id="contentright">
@@ -73,10 +73,10 @@
 		<li><a href="<?php print $line["p"]?>"><?php print $line["n"]?></a></li>
     <?php }?>
     </ul>  
-  <form action="uploadprofcurs.php" method="post" enctype='multipart/form-data'><br>
-		Titlu:<input type="text" name="nume"><br>
-		<input type="file" name="uploadFile">
-		<input type="submit"  name="submit" value="Upload File">
+  <form action="uploadprofcurs.php" method="post" enctype='multipart/form-data' class="formular"><br>
+		Titlu <br><input type="text" name="nume">
+		<input type="file" name="uploadFile" class="file-upload">
+		<input type="submit"  name="submit" value="Upload File" class="submit-upload">
 	</form>
   </div>
 </div>

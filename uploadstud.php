@@ -10,10 +10,14 @@ if(isset($_POST['submit'])){
 	$result = mysql_query("select student.idstudent as id from student JOIN account ON account.idaccount=student.idaccount where account.Username='$username';");
 	$line = mysql_fetch_array($result, MYSQL_ASSOC);
 	$idstud=$line["id"];
-	$idassign=$_POST['nrtema'];
+	$numeassign=$_POST['numetema'];
 	$data=date("Y-m-d");
 	$path="res/".$_SESSION['numemat']."/Submissions/{$_FILES['uploadFile']['name']}";
-	mysql_query("INSERT INTO submission VALUES ('$idsub','$idstud','$idassign','$data','$path')");
+	$result=mysql_query("select idassignment as id from assignment where titlu='$numeassign'");
+	$line = mysql_fetch_array($result, MYSQL_ASSOC);
+	$id = $line["id"];
+	mysql_query("INSERT INTO submission VALUES ('$idsub','$idstud','$id','$data','$path')");
 	print "Upload reusit.";
+	echo '<meta http-equiv=REFRESH CONTENT=3;url="studentcourse.php?name=',$_SESSION['numemat'],'">';
 }
  ?>

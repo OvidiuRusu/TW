@@ -23,9 +23,8 @@
       <li><a href="#"><?php echo $username ?></a></li>
     </ul>
   <div id="contentleft">
-    <ul id="nav2">
+    <ul id="nav2" style="margin-left: 40px">
       <li><a href="studentindex.php">Active Courses</a></li>
-      <li><a href="#">Catalog</a></li>
       <li><a href="#" style="color: #000;">Course List</a></li>
     </ul>
     <div class="coursebox">

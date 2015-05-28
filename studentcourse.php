@@ -66,7 +66,7 @@ ORDER BY due;");
       </tbody>
     </table>
 	<form action="uploadstud.php" method="post" enctype='multipart/form-data'><br>
-		Numar Tema:<input type="text" name="nrtema"><br>
+		Nume Tema:<input type="text" name="numetema"><br>
 		<input type="file" name="uploadFile">
 		<input type="submit"  name="submit" value="Upload File">
 	</form>

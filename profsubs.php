@@ -30,18 +30,18 @@
       <li><a href="#" style="color: #000;">Submissions</a></li>
       <li><a href="#">Catalog</a></li>
     </ul>  
-    <table style="width: 500px; margin-left: 5px;">
+    <table style="width: 700px; margin-left: 5px;">
       <thead>
         <tr>
           <th>Assignment</th>
           <th>Nume Student</th>
           <th>Fisier</th>
           <th>Graded</th>
-        </tr>
+          <th>Nota</th>
       </thead>
       <tbody>
 	  <?php
-		$result = mysql_query("SELECT student.Nume as nume, student.Prenume as prenume,
+		$result = mysql_query("SELECT  submission.idSubmission as idsub, student.Nume as nume, student.Prenume as prenume,
         assignment.Titlu as titlu, submission.Path as path, nota.Nota as nota
         FROM student join submission on student.IdStudent = submission.IdStudent
         JOIN assignment on submission.IdAssignment = assignment.IdAssignment
@@ -56,10 +56,15 @@
         <td><a href="',$line["path"],'">',$den,'</a></td>';
     if(!is_null($line['nota']))
       echo '<td>',"&#10003;",'</td>';
+      $idsub = $line["idsub"];
+      echo '<td><form action="addnota.php method="post">
+    <input type="text" size="1" name="nota">    
+    <input type="submit" name="submit" value="Add">
+  </form></td>';
     echo '</tr>';
       }
+      //?id=',$line["idsub"],' 
       ?>
-      
       </tbody>
     </table>
 

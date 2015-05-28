@@ -73,10 +73,15 @@
 		<li><a href="<?php print $line["p"]?>"><?php print $line["n"]?></a></li>
     <?php }?>
     </ul>  
-  <form action="uploadprofcurs.php" method="post" enctype='multipart/form-data'><br>
+	<form action="uploadprofcurs.php" method="post" enctype='multipart/form-data'><br>
 		Titlu <br><input type="text" name="nume">
 		<input type="file" name="uploadFile" class="file-upload">
 		<input type="submit"  name="submit" value="Upload File" class="submit-upload">
+	</form>
+	<form action="uploadprofcurs.php" method="post" enctype='multipart/form-data'><br>
+		Titlu <br><input type="text" name="nume"><br>
+		Link <br><input type="text" name="nume">
+    <input type="submit"  name="submit" value="Save Link" class="submit-upload">
 	</form>
   </div>
 </div>

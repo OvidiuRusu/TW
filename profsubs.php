@@ -7,6 +7,7 @@
   }
   $username = $_SESSION['username'];
   $numemat=$_GET["name"];
+  $_SESSION['numemat']=$numemat;
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -37,7 +38,6 @@
           <th>Nume Student</th>
           <th>Fisier</th>
           <th>Graded</th>
-          <th>Nota</th>
       </thead>
       <tbody>
 	  <?php
@@ -56,9 +56,7 @@
         <td><a href="',$line["path"],'">',$den,'</a></td>';
     if(!is_null($line['nota'])){
       echo '<td>',"&#10003;",'</td>';
-	  echo '<td></td>';
     }else{
-		echo '<td></td>';
       echo '<td><form action="addnota.php" method="post">
     <input type="text" size="1" name="nota">    
     <input type="submit" name="submit" value="Add">

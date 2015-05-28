@@ -55,12 +55,12 @@
       </thead>
       <tbody>
         <?php
-    $result = mysql_query("SELECT assignment.Titlu AS titlu, assignment.DueDate AS due, materie.Nume AS name 
+    $result = mysql_query("SELECT assignment.Titlu AS titlu, assignment.DueDate AS due, assignment.Path AS path, materie.Nume AS name 
       FROM assignment JOIN materie ON assignment.IdMaterie = materie.IdMaterie WHERE assignment.DueDate < '2015-03-19';");
     while($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
     echo '<tr>
           <td>',$line["name"],'</td>
-          <td>',$line["titlu"],'</td>
+          <td><a href="',$line["path"],'"><strong>',$line["titlu"],'</strong></a></td>
           <td>',$line["due"],'</td>
         </tr>';
          }

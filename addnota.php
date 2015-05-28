@@ -1,1 +1,1 @@
-<?php print $_GET["idsub"]; ?>
+<?php echo 'salut'; ?>

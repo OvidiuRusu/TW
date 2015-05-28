@@ -60,6 +60,7 @@
       echo '<td><form action="addnota.php method="post">
     <input type="text" size="1" name="nota">    
     <input type="submit" name="submit" value="Add">
+    <input type="hidden" name="idsub" value=',$line["idsub"],'>
   </form></td>';
     echo '</tr>';
       }

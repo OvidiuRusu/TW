@@ -30,6 +30,7 @@
       <li><a href="#" style="color: #000;">Assigments</a></li>
       <li><a href="profsubs.php?name=<?php print $numemat?>">Submissions</a></li>
       <li><a href="profcatalog.php?name=<?php print $numemat?>">Catalog</a></li>
+	  <li><a href="#">Reports</a></li>
     </ul>  
     <table>
       <thead>

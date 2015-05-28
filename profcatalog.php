@@ -27,8 +27,8 @@
   <div id="contentleft">
     <ul id="nav2">
       <li><a href="profesorcourse.php?name=<?php print $numemat?>">Assigments</a></li>
-      <li><a href="#" style="color: #000;">Submissions</a></li>
-      <li><a href="profcatalog.php?name=<?php print $numemat?>">Catalog</a></li>
+      <li><a href="profsubs.php?name=<?php print $numemat?>">Submissions</a></li>
+      <li><a href="#" style="color: #000;">Catalog</a></li>
     </ul>  
     <table style="width: 700px; margin-left: 5px;">
       <thead>
@@ -57,7 +57,7 @@
     if(!is_null($line['nota']))
       echo '<td>',"&#10003;",'</td>';
       $idsub = $line["idsub"];
-      echo '<td><form action="addnota.php" method="post">
+      echo '<td><form action="addnota.php method="post">
     <input type="text" size="1" name="nota">    
     <input type="submit" name="submit" value="Add">
     <input type="hidden" name="idsub" value=',$line["idsub"],'>

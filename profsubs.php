@@ -67,12 +67,9 @@
 	}
     echo '</tr>';
       }
-      //?id=',$line["idsub"],' 
       ?>
       </tbody>
     </table>
-
-    <!-- adaugare formular pentru inserare note in contentright &#10003; -->
   </div>
 </div>
 </body>

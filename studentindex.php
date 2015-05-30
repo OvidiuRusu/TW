@@ -6,7 +6,40 @@
     exit();
   }
   $username = $_SESSION['username'];  
+
+require('mysql_table.php');
+class PDF extends PDF_MySQL_Table
+{
+function Header()
+{
+	//Title
+	$this->SetFont('Arial','',18);
+	$this->Cell(0,6,'PDF From mysql',0,1,'C');
+	$this->Ln(10);
+	//Ensure table header is output
+	parent::Header();
+}
+}
+
+
+$pdf=new PDF();
+$pdf->AddPage();
+//First table: put all columns automatically
+$pdf->Table('SELECT * from nota');
+$pdf->AddPage();
+if(isset($_POST['ExportToPDF'])) {
+$variabila=$_POST['ExportToPDF'];
+
+
+$pdf->Output("fisier".".pdf"); 
+///header('Location: '."fisier".".pdf",_blank);
+
+
+}
 ?>
+
+
+
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -72,5 +105,10 @@
   <a href="index.html">homepage</a> | <a href="mailto:tacutanu.vlad@gmail.com">contact</a> |  <a href="images/sitemap.png"> sitemap</a> | &copy; 2015 Mitocariu Emilian • Rusu Ovidiu • Stoian Sorin • Tacutanu Vlad
 </div> -->
 </div>
+  <form method="POST" name="simpleUsing" action="http://localhost/TW/fisier.pdf" target="_BLANK">
+
+	<input method="POST" type="submit" name="ExportToPDF" value="Export to PDF">
+	
+</form>
 </body>
 </html>

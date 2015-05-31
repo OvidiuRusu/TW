@@ -1,4 +1,3 @@
-<!-- connection to date base -->
 <?php
 $mysql_hostname = "localhost";
 $mysql_user = "root";

@@ -1,4 +1,3 @@
-<!-- INSERT a new resource link into data base, based on witch professor is logged in -->
 <?php
 session_start();
 if(isset($_POST['submit'])){

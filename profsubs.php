@@ -47,7 +47,8 @@
         FROM student join submission on student.IdStudent = submission.IdStudent
         JOIN assignment on submission.IdAssignment = assignment.IdAssignment
         LEFT JOIN nota on submission.IdSubmission = nota.IdSubmission
-        WHERE submission.Data < assignment.DueDate
+		join materie on materie.IdMaterie = assignment.IdMaterie
+        WHERE submission.Data < assignment.DueDate and materie.nume = '$numemat'
         ORDER BY submission.Data DESC;");
 		while($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
         $den = end(explode('/', $line["path"]));

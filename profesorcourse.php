@@ -29,8 +29,7 @@
     <ul id="nav2">
       <li><a href="#" style="color: #000;">Assigments</a></li>
       <li><a href="profsubs.php?name=<?php print $numemat?>">Submissions</a></li>
-      <li><a href="profcatalog.php?name=<?php print $numemat?>">Catalog</a></li>
-	  <li><a href="#">Reports</a></li>
+      <li><a href="profcatalog.php?name=<?php print $numemat?>" target="_blank">Catalog</a></li>
     </ul>  
     <table>
       <thead>
@@ -84,6 +83,7 @@
 		Link <br><input type="text" name="link">
     <input type="submit"  name="submit" value="Save Link" class="submit-upload">
 	</form>
+	<div id="reportdiv"><a href="#" id="reports">Reports</a></div>
   </div>
 </div>
 </body>

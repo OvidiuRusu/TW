@@ -222,6 +222,21 @@ td {
   text-decoration : none;
 }
 
+#reports{
+  font-size: 17px;
+  color: blue;
+  text-decoration: none;
+}
+
+#reportdiv{
+  margin-top: 20px;
+}
+
+#reports:hover{
+  color: red;
+  transition: 0.5s;
+}
+
     /*TYPOGRAPHY */
 h1 {
   font-family: Georgia, serif;

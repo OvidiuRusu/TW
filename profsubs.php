@@ -32,7 +32,7 @@
       <li><a href="profcatalog.php?name=<?php print $numemat?>">Catalog</a></li>
 	  <li><a href="#">Reports</a></li>
     </ul>  
-    <table style="width: 700px; margin-left: 5px;">
+    <table style="width: 520px; margin-left: 5px;">
       <thead>
         <tr>
           <th>Assignment</th>

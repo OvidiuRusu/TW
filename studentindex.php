@@ -24,9 +24,8 @@
       <li><a href="#"><?php echo $username ?></a></li>
     </ul>
   <div id="contentleft">
-    <ul id="nav2" style="margin-left: 40px">
+    <ul id="nav2" style="margin-left: 100px">
       <li><a href="studentindex.php" style="color: #000;">Active Courses</a></li>
-      <li><a href="studentcourselist.php">Course List</a></li>
     </ul>
     <?php
     $result = mysql_query("SELECT materie.Nume AS n, student_materie.StartDate AS d FROM materie JOIN student_materie ON materie.IdMaterie=student_materie.IdMaterie
@@ -60,7 +59,7 @@
     echo '<tr>
           <td>',$line["name"],'</td>
           <td><a href="',$line["path"],'"><strong>',$line["titlu"],'</strong></a></td>
-          <td>',$line["due"],'</td>
+          <td width = 70px;>',$line["due"],'</td>
         </tr>';
          }
          ?>

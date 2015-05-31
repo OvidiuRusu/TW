@@ -29,9 +29,9 @@ $numemat=$_SESSION['numemat'];
     </thead>
   <tbody>
         <?php
-		$result = mysql_query("select idStudent, nume from Student order by nume");
+		$result = mysql_query("select idStudent, nume, prenume from Student order by nume");
 		while($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
-			echo '<tr><td>',$line["nume"],'</td>';
+			echo '<tr><td>',$line["nume"],' ',$line["prenume"],'</td>';
 			$idstud = $line["idStudent"];
 			$result2 = mysql_query("select assignment.IdAssignment as idassign from assignment 
 										join materie on materie.idMaterie=assignment.idMaterie 

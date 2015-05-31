@@ -8,7 +8,7 @@ $fac = $_POST['facultate'];
 $matricol = $_POST['matricol'];
 $semestru = $_POST['sem'];
 $username = $_POST['username'];
-$password = $_POST['pass'];
+$password = md5($_POST['pass']);
  
 if($nume == '') {
 	$errmsg_arr[] = 'Nu ai introdus nume';

@@ -39,3 +39,11 @@ SELECT student.Nume as nume, student.Prenume as prenume,
         JOIN assignment on submission.IdAssignment = assignment.IdAssignment
         WHERE submission.Data < assignment.DueDate
 		ORDER BY submission.Data DESC;
+
+
+--
+select assignment.idassignment, submission.IdSubmission, student.nume, nota.Nota from assignment
+left join submission on assignment.IdAssignment=submission.IdSubmission
+left join Student on Student.idStudent=submission.idStudent
+left join nota on submission.IdSubmission=nota.IdSubmission
+where student.IdStudent=2 or submission.IdSubmission <=> NULL

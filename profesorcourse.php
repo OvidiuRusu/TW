@@ -79,9 +79,9 @@
 		<input type="file" name="uploadFile" class="file-upload">
 		<input type="submit"  name="submit" value="Upload File" class="submit-upload">
 	</form>
-	<form action="uploadprofcurs.php" method="post" enctype='multipart/form-data'><br>
+	<form action="uploadprofcurslink.php" method="post"><br>
 		Titlu <br><input type="text" name="nume"><br>
-		Link <br><input type="text" name="nume">
+		Link <br><input type="text" name="link">
     <input type="submit"  name="submit" value="Save Link" class="submit-upload">
 	</form>
   </div>

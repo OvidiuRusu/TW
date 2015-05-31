@@ -15,5 +15,6 @@ if(isset($_POST['submit'])){
 	$path=$_POST['link'];
 	mysql_query("INSERT INTO resource VALUES ('$idres','$nume','$idmat','$path')");
 	print "Upload reusit.";
+	echo '<meta http-equiv=REFRESH CONTENT=3;url="profesorcourse.php?name=',$_SESSION['numemat'],'">';
 }
  ?>

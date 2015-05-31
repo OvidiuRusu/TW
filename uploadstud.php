@@ -1,3 +1,4 @@
+<!--INSERT a submission in Data Base based on a upload button-->
 <?php
 session_start();
 if(isset($_POST['submit'])){

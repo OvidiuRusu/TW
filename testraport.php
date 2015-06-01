@@ -4,7 +4,7 @@ include('connection.php');
 require("reporting/fpdf.php");
 class PDF extends FPDF
 {
-	function CreateTable($header,$materie)
+	function CreateTableMedii($header,$materie)
 	 {
 	 	// Column widths
     $w = array(53, 30);
@@ -12,14 +12,16 @@ class PDF extends FPDF
     for($i=0;$i<count($header);$i++)
         $this->Cell($w[$i],7,$header[$i],1,0,'C');
     $this->Ln();
-    // Data
 
     $result = mysql_query("select student.IdStudent as idstud, student.Nume as n, student.Prenume as p from student
 			left join student_materie on student.IdStudent=student_materie.IdStudent
 			left join materie on student_materie.IdMaterie = materie.IdMaterie
 			where student_materie.Status='In Curs'
 			and materie.Nume='$materie'");
+	$y=0;
     while($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+		$y=$y+6;
+		$this->SetXY(65,41+$y);
         $this->Cell($w[0],6,$line["n"]." ".$line["p"],'LR');
 		$idstud = $line["idstud"];
 		$result2 = mysql_query("select assignment.IdAssignment as idassign from assignment 
@@ -42,19 +44,50 @@ class PDF extends FPDF
 				}
 		}
 		$medie=$medie/$nr;
+		$this->SetXY(118,41+$y);
 		$this->Cell($w[1],6,round($medie,2),'LR');
         $this->Ln();
     }
-
-    /*foreach($data as $row)
-    {
-        $this->Cell($w[0],6,$row[0],'LR');
-        $this->Cell($w[1],6,$row[1],'LR');
-       
-    } */
+	
     // Closing line
+	$y=$y+6;
+	$this->SetXY(65,41+$y);
     $this->Cell(array_sum($w),0,'','T');
 	 }
+	 
+	function CreateTableNrsub($header,$materie){
+		// Column widths
+		$w = array(53, 30);
+		// Header
+		for($i=0;$i<count($header);$i++)
+			$this->Cell($w[$i],7,$header[$i],1,0,'C');
+		$this->Ln();
+
+		$result = mysql_query("select student.IdStudent as idstud, student.Nume as n, student.Prenume as p from student
+				left join student_materie on student.IdStudent=student_materie.IdStudent
+				left join materie on student_materie.IdMaterie = materie.IdMaterie
+				where student_materie.Status='In Curs'
+				and materie.Nume='$materie'");
+		$y=0;
+		while($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+			$y=$y+6;
+			$this->SetXY(65,41+$y);
+			$this->Cell($w[0],6,$line["n"]." ".$line["p"],'LR');
+			$idstud = $line["idstud"];
+			$result2=mysql_query("select count(submission.IdSubmission) as nr from submission
+										join assignment on submission.IdAssignment=assignment.IdAssignment
+										join materie on assignment.IdMaterie=materie.IdMaterie
+										where submission.IdStudent=$idstud and materie.Nume='$materie'");
+			$line2 = mysql_fetch_array($result2, MYSQL_ASSOC);
+				$this->SetXY(118,41+$y);
+				$this->Cell($w[1],6,$line2["nr"],'LR');
+				$this->Ln();
+		}
+		// Closing line
+		$y=$y+6;
+		$this->SetXY(65,41+$y);
+		$this->Cell(array_sum($w),0,'','T');
+	}
 }
 $mat = $_SESSION['numemat'];
 $header = array('Nume Student', 'Media');
@@ -64,9 +97,15 @@ $pdf->SetXY(100,10);
 $pdf->SetFont('Arial','B',16);
 $pdf->Cell(10,10,''.$mat, 0,0,'C');
 $pdf->Cell(3,30,'Media temelor pentru fiecare student', 0,0,'C');
-$pdf->SetXY(10,40);
-$pdf->CreateTable($header,$mat);
+$pdf->SetXY(65,40);
+$pdf->CreateTableMedii($header,$mat);
 
+$pdf->AddPage();
+$pdf->SetXY(100,10);
+$pdf->Cell(10,10,''.$mat, 0,0,'C');
+$pdf->Cell(3,30,'Nr. de rezolvari trimise', 0,0,'C');
+$pdf->SetXY(65,40);
+$pdf->CreateTableNrsub($header,$mat);
 $pdf->Output();
 
 ?>

@@ -83,9 +83,10 @@
     <input type="submit"  name="submit" value="Save Link" class="submit-upload">
 	</form>
 	<div id="reportdiv">
-    <a href="testraport.php" id="reports" target="_blank">Reports</a><br>
-    <a href="similaritati.php" id="reports" target="_blank">Similaritati</a></br>
-    <a href="profcatalog.php?name=<?php print $numemat?>" id="reports" target="_blank">Catalog</a>
+    <a href="testraport.php" id="reports" target="_blank">Reports &amp; Statistics</a><br />
+    <a href="profcatalog.php?name=<?php print $numemat?>" id="reports" target="_blank">Catalog</a><br />
+    <a href="similaritati.php" id="reports" target="_blank">Similaritati</a>
+    
   </div>
   </div>
 </div>

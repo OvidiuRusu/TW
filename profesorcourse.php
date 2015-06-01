@@ -87,7 +87,6 @@
 	<div id="reportdiv">
     <a href="testraport.php" id="reports" target="_blank">Reports &amp; Statistics</a><br />
     <a href="profcatalog.php?name=<?php print $numemat?>" id="reports" target="_blank">Catalog</a><br />
-    <a href="similaritati.php" id="reports" target="_blank">Similaritati</a>
     
   </div>
   </div>

@@ -14,7 +14,7 @@ DROP TABLE Universitate;
 CREATE TABLE Account(
   IdAccount INT(10) PRIMARY KEY,
   Username VARCHAR(25) UNIQUE,
-  Password VARCHAR(25) NOT NULL,
+  Password VARCHAR(100) NOT NULL,
   Tip VARCHAR(1) NOT NULL,
   CHECK (Tip IN ('S','P','A'))
   );
@@ -125,37 +125,37 @@ INSERT INTO universitate VALUES(1,'Univ. Al. I. Cuza');
 
 INSERT INTO facultate VALUES(101,'Facultatea de Informatica', 1);
 
-INSERT INTO account VALUES (1, 'sabin.buraga', 'sunt_sefu', 'P');
-INSERT INTO account VALUES (2, 'ciprian.amariei', 'parola', 'P');
-INSERT INTO account VALUES (3, 'cristian.farsianru', 'parola', 'P');
-INSERT INTO account VALUES (4, 'alex.moruz', 'parola', 'P');
-INSERT INTO account VALUES (5, 'adrian.iftene', 'parola', 'P');
-INSERT INTO account VALUES (6, 'florin.iacob', 'parola', 'P');
-INSERT INTO account VALUES (7, 'raluca.gimbuta', 'parola', 'P');
-INSERT INTO account VALUES (8, 'lucian.lazar', 'parola', 'P');
-INSERT INTO account VALUES (9, 'stefan.luchian', 'parola', 'P');
-INSERT INTO account VALUES (10, 'lenuta.alboaie', 'parola', 'P');
-INSERT INTO account VALUES (11, 'emilian.mitocariu', 'ps', 'S');
-INSERT INTO account VALUES (12, 'vlad.tacutanu', 'ps', 'S');
-INSERT INTO account VALUES (13, 'ovidiu.rusu', 'ps', 'S');
-INSERT INTO account VALUES (14, 'sorin.stoian', 'ps', 'S');
-INSERT INTO account VALUES (15, 'marian.budai', 'ps', 'S');
-INSERT INTO account VALUES (16, 'mihai.cosbuc', 'parola', 'P');
-INSERT INTO account VALUES (17, 'george.radulescu', 'parola', 'P');
-INSERT INTO account VALUES (18, 'cristian.vidrascu', 'parola', 'P');
-INSERT INTO account VALUES (19, 'florentin.olariu', 'parola', 'P');
-INSERT INTO account VALUES (20, 'paul.hodoreanu', 'parola', 'S');
-INSERT INTO account VALUES (21, 'florin.finaru', 'parola', 'S');
-INSERT INTO account VALUES (22, 'paul.benkdo', 'parola', 'S');
-INSERT INTO account VALUES (23, 'ana.petrita', 'parola', 'S');
-INSERT INTO account VALUES (24, 'andreea.condruta', 'parola', 'S');
-INSERT INTO account VALUES (25, 'rares.drugu', 'parola', 'S');
-INSERT INTO account VALUES (26, 'andrei.papara', 'parola', 'S');
-INSERT INTO account VALUES (27, 'alexandru.rusu', 'parola', 'S');
-INSERT INTO account VALUES (28, 'vlad.lihaceanu', 'parola', 'S');
-INSERT INTO account VALUES (29, 'dragos.ivan', 'parola', 'S');
-INSERT INTO account VALUES (30, 'nicolae.berendea', 'parola', 'S');
-INSERT INTO account VALUES (31, 'dacian.spanu', 'parola', 'S');
+INSERT INTO account VALUES (1, 'sabin.buraga', '8287458823facb8ff918dbfabcd22ccb', 'P');
+INSERT INTO account VALUES (2, 'ciprian.amariei', '8287458823facb8ff918dbfabcd22ccb', 'P');
+INSERT INTO account VALUES (3, 'cristian.farsianru', '8287458823facb8ff918dbfabcd22ccb', 'P');
+INSERT INTO account VALUES (4, 'alex.moruz', '8287458823facb8ff918dbfabcd22ccb', 'P');
+INSERT INTO account VALUES (5, 'adrian.iftene', '8287458823facb8ff918dbfabcd22ccb', 'P');
+INSERT INTO account VALUES (6, 'florin.iacob', '8287458823facb8ff918dbfabcd22ccb', 'P');
+INSERT INTO account VALUES (7, 'raluca.gimbuta', '8287458823facb8ff918dbfabcd22ccb', 'P');
+INSERT INTO account VALUES (8, 'lucian.lazar', '8287458823facb8ff918dbfabcd22ccb', 'P');
+INSERT INTO account VALUES (9, 'stefan.luchian', '8287458823facb8ff918dbfabcd22ccb', 'P');
+INSERT INTO account VALUES (10, 'lenuta.alboaie', '8287458823facb8ff918dbfabcd22ccb', 'P');
+INSERT INTO account VALUES (11, 'emilian.mitocariu', '8287458823facb8ff918dbfabcd22ccb', 'S');
+INSERT INTO account VALUES (12, 'vlad.tacutanu', '8287458823facb8ff918dbfabcd22ccb', 'S');
+INSERT INTO account VALUES (13, 'ovidiu.rusu', '8287458823facb8ff918dbfabcd22ccb', 'S');
+INSERT INTO account VALUES (14, 'sorin.stoian', '8287458823facb8ff918dbfabcd22ccb', 'S');
+INSERT INTO account VALUES (15, 'marian.budai', '8287458823facb8ff918dbfabcd22ccb', 'S');
+INSERT INTO account VALUES (16, 'mihai.cosbuc', '8287458823facb8ff918dbfabcd22ccb', 'P');
+INSERT INTO account VALUES (17, 'george.radulescu', '8287458823facb8ff918dbfabcd22ccb', 'P');
+INSERT INTO account VALUES (18, 'cristian.vidrascu', '8287458823facb8ff918dbfabcd22ccb', 'P');
+INSERT INTO account VALUES (19, 'florentin.olariu', '8287458823facb8ff918dbfabcd22ccb', 'P');
+INSERT INTO account VALUES (20, 'paul.hodoreanu', '8287458823facb8ff918dbfabcd22ccb', 'S');
+INSERT INTO account VALUES (21, 'florin.finaru', '8287458823facb8ff918dbfabcd22ccb', 'S');
+INSERT INTO account VALUES (22, 'paul.benkdo', '8287458823facb8ff918dbfabcd22ccb', 'S');
+INSERT INTO account VALUES (23, 'ana.petrita', '8287458823facb8ff918dbfabcd22ccb', 'S');
+INSERT INTO account VALUES (24, 'andreea.condruta', '8287458823facb8ff918dbfabcd22ccb', 'S');
+INSERT INTO account VALUES (25, 'rares.drugu', '8287458823facb8ff918dbfabcd22ccb', 'S');
+INSERT INTO account VALUES (26, 'andrei.papara', '8287458823facb8ff918dbfabcd22ccb', 'S');
+INSERT INTO account VALUES (27, 'alexandru.rusu', '8287458823facb8ff918dbfabcd22ccb', 'S');
+INSERT INTO account VALUES (28, 'vlad.lihaceanu', '8287458823facb8ff918dbfabcd22ccb', 'S');
+INSERT INTO account VALUES (29, 'dragos.ivan', '8287458823facb8ff918dbfabcd22ccb', 'S');
+INSERT INTO account VALUES (30, 'nicolae.berendea', '8287458823facb8ff918dbfabcd22ccb', 'S');
+INSERT INTO account VALUES (31, 'dacian.spanu', '8287458823facb8ff918dbfabcd22ccb', 'S');
 
 INSERT INTO profesor VALUES (1, 'Buraga', 'Sabin', 'sabin.buraga@info.uaic.ro', 'Conf.dr.', 101, 1);
 INSERT INTO profesor VALUES (2, 'Amariei', 'Ciprian', 'ciprian.amariei@info.uaic.ro', 'Prof', 101, 2);

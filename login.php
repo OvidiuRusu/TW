@@ -33,7 +33,7 @@
 			$bd->query("select username,password,tip from account;");
 			$success=0;
 			while ($bd->next_record()) {
-				if($bd->Record["username"]==$_REQUEST["user"] && $bd->Record["password"]==$_REQUEST["pass"]) {
+				if($bd->Record["username"]==$_REQUEST["user"] && $bd->Record["password"]==md5($_REQUEST["pass"])) {
 					$success=1;
 					$tip=$bd->Record["tip"];
 				}

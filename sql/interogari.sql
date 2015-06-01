@@ -61,3 +61,8 @@ left join student_materie on student.IdStudent=student_materie.IdStudent
 left join materie on student_materie.IdMaterie = materie.IdMaterie
 where student_materie.Status='In Curs'
 and materie.Nume='SGBD'
+
+--
+select nota.nota from nota
+join submission on nota.IdSubmission=submission.IdSubmission
+where submission.IdStudent=2

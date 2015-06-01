@@ -83,7 +83,7 @@
 		Link <br><input type="text" name="link">
     <input type="submit"  name="submit" value="Save Link" class="submit-upload">
 	</form>
-	<div id="reportdiv"><a href="testraport.php" id="reports">Reports</a></div>
+	<div id="reportdiv"><a href="testraport.php" id="reports" target="_blank">Reports</a></div>
   </div>
 </div>
 </body>

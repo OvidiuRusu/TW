@@ -90,10 +90,8 @@ CREATE TABLE Assignment(
   AssignDate DATE NOT NULL,
   DueDate DATE NOT NULL,
   Punctaj DECIMAL(3) NOT NULL,
-  Tip VARCHAR(10) NOT NULL,
   Path VARCHAR(255),
-  FOREIGN KEY(IdMaterie) REFERENCES Materie(IdMaterie),
-  CHECK(Tip IN ('Tema','Proiect'))
+  FOREIGN KEY(IdMaterie) REFERENCES Materie(IdMaterie)
   ) ENGINE=INNODB;
   
 CREATE TABLE Submission(
@@ -177,7 +175,7 @@ INSERT INTO profesor VALUES (15, 'Dorel', 'Lucanu', 'dorel.lucanu@info.uaic.ro',
 
   
 INSERT INTO materie VALUES(1,'Algoritmi Genetici',3,NULL);
-INSERT INTO materie VALUES(2,'LFAC',3,NULL);
+INSERT INTO materie VALUES(2,'Limbaje formale, automate si compilatoare',3,NULL);
 INSERT INTO materie VALUES(3,'Retele',3,NULL);
 INSERT INTO materie VALUES(4,'Baze de date',3,NULL);
 INSERT INTO materie VALUES(5,'Algoritmica Grafurilor',3,NULL);
@@ -389,30 +387,30 @@ INSERT INTO profesor_materie VALUES(13,14);
 INSERT INTO profesor_materie VALUES(14,13);
 INSERT INTO profesor_materie VALUES(15,12);
 
-INSERT INTO Assignment VALUES(1,7,'Tema1', NULL, '2015-02-15', '2015-02-22', 10, 'Tema', 'res/SGBD/Assignments/Exercitii_lab1.pdf');
-INSERT INTO Assignment VALUES(2,7,'Tema2', NULL, '2015-02-22', '2015-03-01', 10, 'Tema', 'res/SGBD/Assignments/Exercitii_lab2.pdf');
-INSERT INTO Assignment VALUES(3,7,'Tema3', NULL, '2015-03-01', '2015-03-08', 10, 'Tema', 'res/SGBD/Assignments/Exercitii_lab3.pdf');
-INSERT INTO Assignment VALUES(4,7,'Tema4', NULL, '2015-03-08', '2015-03-15', 10, 'Tema', 'res/SGBD/Assignments/Exercitii_lab4.pdf');
-INSERT INTO Assignment VALUES(5,7,'Tema5', NULL, '2015-03-15', '2015-03-22', 10, 'Tema', 'res/SGBD/Assignments/Exercitii_lab5.pdf');
-INSERT INTO Assignment VALUES(6,7,'Tema6', NULL, '2015-03-22', '2015-03-29', 10, 'Tema', 'res/SGBD/Assignments/Exercitii_lab6.pdf');
-INSERT INTO Assignment VALUES(7,7,'Tema7', NULL, '2015-03-29', '2015-04-05', 10, 'Tema', 'res/SGBD/Assignments/Exercitii_lab7.pdf');
-INSERT INTO Assignment VALUES(8,7,'Tema8', NULL, '2015-04-05', '2015-04-12', 10, 'Tema', 'res/SGBD/Assignments/Exercitii_lab8.pdf');
-INSERT INTO Assignment VALUES(9,7,'Tema9', NULL, '2015-04-12', '2015-04-19', 10, 'Tema', 'res/SGBD/Assignments/Exercitii_lab9.pdf');
-INSERT INTO Assignment VALUES(10,7,'Tema10', NULL, '2015-04-19', '2015-04-26', 10, 'Tema', 'res/SGBD/Assignments/Exercitii_lab10.pdf');
+INSERT INTO Assignment VALUES(1,7,'Tema1', NULL, '2015-02-15', '2015-02-22', 10, 'res/SGBD/Assignments/Exercitii_lab1.pdf');
+INSERT INTO Assignment VALUES(2,7,'Tema2', NULL, '2015-02-22', '2015-03-01', 10, 'res/SGBD/Assignments/Exercitii_lab2.pdf');
+INSERT INTO Assignment VALUES(3,7,'Tema3', NULL, '2015-03-01', '2015-03-08', 10, 'res/SGBD/Assignments/Exercitii_lab3.pdf');
+INSERT INTO Assignment VALUES(4,7,'Tema4', NULL, '2015-03-08', '2015-03-15', 10, 'res/SGBD/Assignments/Exercitii_lab4.pdf');
+INSERT INTO Assignment VALUES(5,7,'Tema5', NULL, '2015-03-15', '2015-03-22', 10, 'res/SGBD/Assignments/Exercitii_lab5.pdf');
+INSERT INTO Assignment VALUES(6,7,'Tema6', NULL, '2015-03-22', '2015-03-29', 10, 'res/SGBD/Assignments/Exercitii_lab6.pdf');
+INSERT INTO Assignment VALUES(7,7,'Tema7', NULL, '2015-03-29', '2015-04-05', 10, 'res/SGBD/Assignments/Exercitii_lab7.pdf');
+INSERT INTO Assignment VALUES(8,7,'Tema8', NULL, '2015-04-05', '2015-04-12', 10, 'res/SGBD/Assignments/Exercitii_lab8.pdf');
+INSERT INTO Assignment VALUES(9,7,'Tema9', NULL, '2015-04-12', '2015-04-19', 10, 'res/SGBD/Assignments/Exercitii_lab9.pdf');
+INSERT INTO Assignment VALUES(10,7,'Tema10', NULL, '2015-04-19', '2015-04-26', 10, 'res/SGBD/Assignments/Exercitii_lab10.pdf');
 
-INSERT INTO Assignment VALUES(11,10,'Lab1', NULL, '2015-02-15', '2015-02-22', 10, 'Tema', 'res/Ingineria Programarii/Assignments/Lab01.pdf');
-INSERT INTO Assignment VALUES(12,10,'Lab2', NULL, '2015-02-22', '2015-03-01', 10, 'Tema', 'res/Ingineria Programarii/Assignments/Lab02.pdf');
-INSERT INTO Assignment VALUES(13,10,'Lab3', NULL, '2015-03-01', '2015-03-08', 10, 'Tema','res/Ingineria Programarii/Assignments/Lab03.pdf');
-INSERT INTO Assignment VALUES(14,10,'Lab4', NULL, '2015-03-08', '2015-03-15', 10, 'Tema', 'res/Ingineria Programarii/Assignments/Lab04.pdf');
-INSERT INTO Assignment VALUES(15,10,'Lab5', NULL, '2015-03-15', '2015-03-22', 10, 'Tema', 'res/Ingineria Programarii/Assignments/Lab05.pdf');
-INSERT INTO Assignment VALUES(16,10,'Lab6', NULL, '2015-03-22', '2015-03-29', 10, 'Tema', 'res/Ingineria Programarii/Assignments/Lab06.pdf');
-INSERT INTO Assignment VALUES(17,10,'Lab7', NULL, '2015-03-29', '2015-04-05', 10, 'Tema', 'res/Ingineria Programarii/Assignments/Lab07.pdf');
-INSERT INTO Assignment VALUES(18,10,'Lab8', NULL, '2015-04-05', '2015-04-12', 10, 'Tema', 'res/Ingineria Programarii/Assignments/Lab08.pdf');
-INSERT INTO Assignment VALUES(19,10,'Proiect', NULL, '2015-04-12', '2015-04-19', 10, 'Proiect', NULL);
+INSERT INTO Assignment VALUES(11,10,'Lab1', NULL, '2015-02-15', '2015-02-22', 10, 'res/Ingineria Programarii/Assignments/Lab01.pdf');
+INSERT INTO Assignment VALUES(12,10,'Lab2', NULL, '2015-02-22', '2015-03-01', 10, 'res/Ingineria Programarii/Assignments/Lab02.pdf');
+INSERT INTO Assignment VALUES(13,10,'Lab3', NULL, '2015-03-01', '2015-03-08', 10, 'res/Ingineria Programarii/Assignments/Lab03.pdf');
+INSERT INTO Assignment VALUES(14,10,'Lab4', NULL, '2015-03-08', '2015-03-15', 10, 'res/Ingineria Programarii/Assignments/Lab04.pdf');
+INSERT INTO Assignment VALUES(15,10,'Lab5', NULL, '2015-03-15', '2015-03-22', 10, 'res/Ingineria Programarii/Assignments/Lab05.pdf');
+INSERT INTO Assignment VALUES(16,10,'Lab6', NULL, '2015-03-22', '2015-03-29', 10, 'res/Ingineria Programarii/Assignments/Lab06.pdf');
+INSERT INTO Assignment VALUES(17,10,'Lab7', NULL, '2015-03-29', '2015-04-05', 10, 'res/Ingineria Programarii/Assignments/Lab07.pdf');
+INSERT INTO Assignment VALUES(18,10,'Lab8', NULL, '2015-04-05', '2015-04-12', 10, 'res/Ingineria Programarii/Assignments/Lab08.pdf');
+INSERT INTO Assignment VALUES(19,10,'Proiect', NULL, '2015-04-12', '2015-04-19', 10, 'res/Ingineria Programarii/Assignments/Proiect.pdf');
 
-INSERT INTO Assignment VALUES(20,8,'Tema1', NULL, '2015-03-15', '2015-03-22', 100, 'Tema', 'res/Tehnologii Web/Assignments/tema1.txt');
-INSERT INTO Assignment VALUES(21,8,'Tema2', NULL, '2015-03-22', '2015-03-29', 100, 'Tema', 'res/Tehnologii Web/Assignments/tema2.txt');
-INSERT INTO Assignment VALUES(22,8,'Proiect', NULL, '2015-03-29', '2015-04-05', 100, 'Proiect', NULL);
+INSERT INTO Assignment VALUES(20,8,'Tema1', NULL, '2015-03-15', '2015-03-22', 100, 'res/Tehnologii Web/Assignments/tema1.txt');
+INSERT INTO Assignment VALUES(21,8,'Tema2', NULL, '2015-03-22', '2015-03-29', 100, 'res/Tehnologii Web/Assignments/tema2.txt');
+INSERT INTO Assignment VALUES(22,8,'Proiect', NULL, '2015-03-29', '2015-04-05', 100, 'res/Tehnologii Web/Assignments/proiect.txt');
 
 
 INSERT INTO Submission VALUES(1, 3, 1,'2015-02-20', 'res/SGBD/Submissions/Rusu_Ovidiu_T1.zip');
@@ -437,11 +435,16 @@ INSERT INTO Nota VALUES(1, 1, 8, 10);
 INSERT INTO Nota VALUES(2, 2, 8, 8);
 INSERT INTO Nota VALUES(3, 3, 8, 10);
 INSERT INTO Nota VALUES(4, 4, 8, 10);
-INSERT INTO Nota VALUES(5, 6, 5, 7);
-INSERT INTO Nota VALUES(6, 8, 5, 9);
-INSERT INTO Nota VALUES(7, 9, 5, 8);
-INSERT INTO Nota VALUES(8, 12, 5, 10);
-INSERT INTO Nota VALUES(9, 13, 5, 9);
+INSERT INTO Nota VALUES(5, 5, 8, 7);
+INSERT INTO Nota VALUES(6, 6, 5, 9);
+INSERT INTO Nota VALUES(7, 7, 5, 9);
+INSERT INTO Nota VALUES(8, 8, 5, 9);
+INSERT INTO Nota VALUES(9, 9, 5, 8);
+INSERT INTO Nota VALUES(10, 10, 5, 5);
+INSERT INTO Nota VALUES(11, 11, 5, 6);
+INSERT INTO Nota VALUES(12, 12, 5, 10);
+INSERT INTO Nota VALUES(13, 13, 5, 6);
+INSERT INTO Nota VALUES(14, 14,1, 9);
 
 
 INSERT INTO Resource VALUES(1, 'Conditii si bucle', 7, 'res/SGBD/Resources/Conditii si bucle.pdf');

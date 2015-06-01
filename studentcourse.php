@@ -56,23 +56,53 @@ and account.Username = '$username') AS B
 ON A.id = B.id
 ORDER BY due;");
 		while($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
-      if($line["tip"]=='Tema')
-      {
-		echo '<tr>
-          <td><a href="',$line["path"],'"><strong>',$line["titlu"],'</strong></a></td>
-          <td>',$line["due"],'</td>
-          <td>',$line["nota"],'</td>
-        </tr>';
-         }
-      else
-      {
-        //de modificat
-        /*echo '<tr>
-          <td><a href="',$line["path"],'"><strong>',$line["titlu"],'</strong></a></td>
-          <td>',$line["idstudent"],'</td>
-          <td>',$line["nota"],'</td>
-        </tr>';*/
-      }
+		    if($line["tip"]=='Tema'){
+				echo '<tr>
+				  <td><a href="',$line["path"],'"><strong>',$line["titlu"],'</strong></a></td>
+				  <td>',$line["due"],'</td>
+				  <td>',$line["nota"],'</td>
+				</tr>';
+			}
+			else{
+				$result1=mysql_query("select student.IdStudent as idstud from account
+											join student on account.IdAccount=student.IdAccount
+											where account.Username='emilian.mitocariu'");
+				$line1=mysql_fetch_array($result1, MYSQL_ASSOC);
+				$idstud=$line1["idstud"];
+				$result2 = mysql_query("select assignment.IdAssignment as idassign from assignment 
+											join materie on materie.idMaterie=assignment.idMaterie 
+											where materie.nume = '$numemat'");
+				$medie=0;
+				$nr=0;
+				while($line2 = mysql_fetch_array($result2, MYSQL_ASSOC)){
+						$idassign = $line2["idassign"];
+						$result3 = mysql_query("select nota.Nota as nota from nota
+													join submission on submission.IdSubmission=nota.IdSubmission
+													join assignment on assignment.IdAssignment=submission.IdAssignment
+													where assignment.IdAssignment=$idassign and submission.IdStudent=$idstud");
+						$line3 = mysql_fetch_array($result3, MYSQL_ASSOC);
+						if(is_null($line3["nota"])){
+							$nr=$nr+1;
+						}else{
+							$nr=$nr+1;
+							$medie=$medie+$line3["nota"];
+						}
+				}
+				$medie=$medie/$nr;
+				if($medie>5){
+					echo '<tr>
+					  <td><a href="',$line["path"],'"><strong>',$line["titlu"],'</strong></a></td>
+					  <td>',$line["due"],'</td>
+					  <td>',$line["nota"],'</td>
+					</tr>';
+				}else{
+					echo '<tr>
+					  <td><a href="',$line["path"],'"><strong>',$line["titlu"],'</strong></a></td>
+					  <td>',$line["due"],'</td>
+					  <td style="color:#FF0000; text-align:center; font-weight:bold; font-size:17px;">X</td>
+					</tr>';
+				}
+			}
        }
          ?>
     

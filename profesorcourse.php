@@ -53,9 +53,11 @@
       </tbody>
     </table>
     <form action="uploadprofassign.php" method="post" enctype='multipart/form-data' class="formular">
+		  Titlu <br><input type="text" name="titlu"><br>
 		  Due date(format yyyy-mm-dd) <input type="text" name="duedate"><br>
 		  Descriere <br><input type="text" name="descriere"><br>
 		  Punctaj <br><input type="text" name="punctaj">
+		  Tip(Tema/Proiect) <br><input type="text" name="tip">
 		  <input type="file" name="uploadFile" class="file-upload">
 		  <input type="submit"  name="submit" value="Upload File" class="submit-upload">
 	</form>

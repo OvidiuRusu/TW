@@ -12,13 +12,14 @@ if(isset($_POST['submit'])){
 	$line = mysql_fetch_array($result, MYSQL_ASSOC);
 		$idmat=$line["id"];
 		
-	$titlu="Tema{$idassign}";
+	$titlu=$_POST['titlu'];
 	$descriere=$_POST['descriere'];
 	$data=date("Y-m-d");
+	$tip=$_POST['tip'];
 	$duedate=$_POST['duedate'];
 	$punctaj=(float)$_POST['punctaj'];
 	$path="res/".$_SESSION['numemat']."/Assignments/{$_FILES['uploadFile']['name']}";
-	mysql_query("INSERT INTO assignment VALUES ('$idassign','$idmat','$titlu','$descriere','$data','$duedate','$punctaj','$path')");
+	mysql_query("INSERT INTO assignment VALUES ('$idassign','$idmat','$titlu','$descriere','$data','$duedate','$punctaj','$tip','$path')");
 	print "Upload reusit.";
 	echo '<meta http-equiv=REFRESH CONTENT=3;url="profesorcourse.php?name=',$_SESSION['numemat'],'">';
 }

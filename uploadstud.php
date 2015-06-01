@@ -18,6 +18,8 @@ if(isset($_POST['submit'])){
 	$id = $line["id"];
 	mysql_query("INSERT INTO submission VALUES ('$idsub','$idstud','$id','$data','$path')");
 	print "Upload reusit.";
-	echo '<meta http-equiv=REFRESH CONTENT=3;url="studentcourse.php?name=',$_SESSION['numemat'],'">';
+	$mat = $_SESSION['numemat'];
+	$mat = str_replace(" ","%20",$mat);
+	echo '<meta http-equiv=REFRESH CONTENT=3;url="studentcourse.php?name=',$mat,'">';
 }
  ?>

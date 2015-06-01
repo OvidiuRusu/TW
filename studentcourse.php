@@ -67,11 +67,11 @@ ORDER BY due;");
       else
       {
         //de modificat
-        echo '<tr>
+        /*echo '<tr>
           <td><a href="',$line["path"],'"><strong>',$line["titlu"],'</strong></a></td>
           <td>',$line["idstudent"],'</td>
           <td>',$line["nota"],'</td>
-        </tr>';
+        </tr>';*/
       }
        }
          ?>
@@ -79,7 +79,7 @@ ORDER BY due;");
       </tbody>
     </table>
 	<form action="uploadstud.php" method="post" enctype='multipart/form-data' class="formular"><br>
-		Numar Tema<input type="text" name="nrtema"><br>
+		Numar Tema<input type="text" name="numetema"><br>
 		<input type="file" name="uploadFile" class="file-upload">
 		<input type="submit"  name="submit" value="Upload File" class="submit-upload">
 	</form>

@@ -1,4 +1,5 @@
 <?php
+	//inseram in baza de date o noua nota preluata dintr-un formular prin intermediul unui buton
 	session_start();
 	$username = $_SESSION['username'];
 	if(isset($_POST['nota'])){

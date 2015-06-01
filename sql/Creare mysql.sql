@@ -408,6 +408,10 @@ INSERT INTO Assignment VALUES(17,10,'Lab7', NULL, '2015-03-29', '2015-04-05', 10
 INSERT INTO Assignment VALUES(18,10,'Lab8', NULL, '2015-04-05', '2015-04-12', 10, 'res/Ingineria Programarii/Assignments/Lab08.pdf');
 INSERT INTO Assignment VALUES(19,10,'Proiect', NULL, '2015-04-12', '2015-04-19', 10, 'res/Ingineria Programarii/Assignments/Proiect.pdf');
 
+INSERT INTO Assignment VALUES(20,8,'Tema1', NULL, '2015-03-15', '2015-03-22', 100, 'res/Tehnologii Web/Assignments/tema1.txt');
+INSERT INTO Assignment VALUES(21,8,'Tema2', NULL, '2015-03-22', '2015-03-29', 100, 'res/Tehnologii Web/Assignments/tema2.txt');
+INSERT INTO Assignment VALUES(22,8,'Proiect', NULL, '2015-03-29', '2015-04-05', 100, 'res/Tehnologii Web/Assignments/proiect.txt');
+
 
 INSERT INTO Submission VALUES(1, 3, 1,'2015-02-20', 'res/SGBD/Submissions/Rusu_Ovidiu_T1.zip');
 INSERT INTO Submission VALUES(2, 2, 4,'2015-03-14', 'res/SGBD/Submissions/Vlad_Tacutanu_T4.txt');
@@ -422,6 +426,9 @@ INSERT INTO Submission VALUES(10, 14, 12,'2015-03-14', 'res/Ingineria Programari
 INSERT INTO Submission VALUES(11, 14, 13,'2015-03-16', 'res/Ingineria Programarii/Submissions/Hallo.java');
 INSERT INTO Submission VALUES(12, 13, 12,'2015-03-14', 'res/Ingineria Programarii/Submissions/Manage.java');
 INSERT INTO Submission VALUES(13, 13, 14,'2015-03-16', 'res/Ingineria Programarii/Submissions/MyException.java');
+INSERT INTO Submission VALUES(14, 1, 20,'2015-03-16', 'res/Tehnologii Web/Submissions/tema1.txt');
+INSERT INTO Submission VALUES(15, 1, 21,'2015-03-26', 'res/Tehnologii Web/Submissions/tema2.txt');
+INSERT INTO Submission VALUES(16, 1, 22,'2015-04-03', 'res/Tehnologii Web/Submissions/proiect.txt');
 
 
 INSERT INTO Nota VALUES(1, 1, 8, 10);
@@ -453,3 +460,9 @@ INSERT INTO Resource VALUES(14, 'Design Patterns', 10, 'res/Ingineria Programari
 INSERT INTO Resource VALUES(15, 'Creational Patterns', 10, 'res/Ingineria Programarii/Resources/IP06.pdf');
 INSERT INTO Resource VALUES(16, 'Behavioral Patterns', 10, 'res/Ingineria Programarii/Resources/IP07.pdf');
 INSERT INTO Resource VALUES(17, 'Modelare', 10, 'res/Ingineria Programarii/Resources/IP08.pdf');
+
+INSERT INTO Resource VALUES(18, 'Curs 1', 8, 'res/Tehnologii Web/Resources/web00Introducere.pdf');
+INSERT INTO Resource VALUES(19, 'Curs 2', 8, 'res/Tehnologii Web/Resources/web02ProgramareWeb-HTTP-CGI.pdf');
+INSERT INTO Resource VALUES(20, 'Curs 3', 8, 'res/Tehnologii Web/Resources/web04DezvoltareaAplicatiilorWeb-InginerieWeb.pdf');
+INSERT INTO Resource VALUES(21, 'Curs 4', 8, 'res/Tehnologii Web/Resources/web05DezvoltareaAplicatiilorWeb-javascript-nodejs.pdf');
+INSERT INTO Resource VALUES(22, 'Curs 5', 8, 'res/Tehnologii Web/Resources/web05DezvoltareaAplicatiilorWeb-PHP.pdf');

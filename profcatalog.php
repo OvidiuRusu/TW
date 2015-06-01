@@ -35,8 +35,14 @@ $numemat=$_SESSION['numemat'];
 			left join materie on student_materie.IdMaterie = materie.IdMaterie
 			where student_materie.Status='In Curs'
 			and materie.Nume='$numemat'");
+		$rand=0;
 		while($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
-			echo '<tr><td>',$line["nume"],' ',$line["prenume"],'</td>';
+			$rand=$rand+1;
+			if($rand % 2 == 0){
+				echo '<tr><td style="font-weight: bold;">',$line["nume"],' ',$line["prenume"],'</td>';
+			}else{
+				echo '<tr><td bgcolor="#C4E6E6" style="font-weight: bold;">',$line["nume"],' ',$line["prenume"],'</td>';
+			}
 			$idstud = $line["idstud"];
 			$result2 = mysql_query("select assignment.IdAssignment as idassign from assignment 
 										join materie on materie.idMaterie=assignment.idMaterie 
@@ -48,10 +54,18 @@ $numemat=$_SESSION['numemat'];
 											join assignment on assignment.IdAssignment=submission.IdAssignment
 											where assignment.IdAssignment=$idassign and submission.IdStudent=$idstud");
 				$line3 = mysql_fetch_array($result3, MYSQL_ASSOC);
-				if(is_null($line3["nota"])){
-					echo '<td></td>';
+				if($rand % 2 == 0){
+					if(is_null($line3["nota"])){
+						echo '<td></td>';
+					}else{
+						echo '<td>',$line3["nota"],'</td>';
+					}
 				}else{
-					echo '<td>',$line3["nota"],'</td>';
+					if(is_null($line3["nota"])){
+						echo '<td bgcolor="#C4E6E6"></td>';
+					}else{
+						echo '<td bgcolor="#C4E6E6">',$line3["nota"],'</td>';
+					}
 				}
 			}
 			echo '</tr>';

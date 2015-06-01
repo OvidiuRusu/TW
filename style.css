@@ -429,10 +429,18 @@ form input[type=text]:focus {
 
 .file-upload::-webkit-file-upload-button {
   margin-top: 5px;
-  padding:5px 15px; background:#ccc; border:0 none;
+  padding:5px 15px; 
+  background:#ccc;
+  border:0 none;
   cursor:pointer;
   -webkit-border-radius: 5px;
   border-radius: 5px; 
+}
+
+.file-upload::-webkit-file-upload-button:hover{
+  background: #CE0E0E;
+  color: white;
+  transition: 0.5s;
 }
 
 .submit-upload {
@@ -441,6 +449,12 @@ form input[type=text]:focus {
   cursor:pointer;
   -webkit-border-radius: 5px;
   border-radius: 5px; 
+}
+
+.submit-upload:hover{
+  background: #CE0E0E;
+  color: white;
+  transition: 0.5s;
 }
 
 .formular{

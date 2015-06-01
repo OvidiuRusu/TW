@@ -432,17 +432,19 @@ INSERT INTO Submission VALUES(14, 1, 20,'2015-03-16', 'res/Tehnologii Web/Submis
 INSERT INTO Submission VALUES(15, 1, 21,'2015-03-26', 'res/Tehnologii Web/Submissions/tema2.txt');
 INSERT INTO Submission VALUES(16, 1, 22,'2015-04-03', 'res/Tehnologii Web/Submissions/proiect.txt');
 
-
-INSERT INTO Nota VALUES(1, 1, 8, 10);
 INSERT INTO Nota VALUES(2, 2, 8, 8);
 INSERT INTO Nota VALUES(3, 3, 8, 10);
 INSERT INTO Nota VALUES(4, 4, 8, 10);
-INSERT INTO Nota VALUES(5, 6, 5, 7);
-INSERT INTO Nota VALUES(6, 8, 5, 9);
-INSERT INTO Nota VALUES(7, 9, 5, 8);
-INSERT INTO Nota VALUES(8, 12, 5, 10);
-INSERT INTO Nota VALUES(9, 13, 5, 9);
-
+INSERT INTO Nota VALUES(5, 5, 8, 7);
+INSERT INTO Nota VALUES(6, 6, 5, 9);
+INSERT INTO Nota VALUES(7, 7, 5, 9);
+INSERT INTO Nota VALUES(8, 8, 5, 9);
+INSERT INTO Nota VALUES(9, 9, 5, 8);
+INSERT INTO Nota VALUES(10, 10, 5, 5);
+INSERT INTO Nota VALUES(11, 11, 5, 6);
+INSERT INTO Nota VALUES(12, 12, 5, 10);
+INSERT INTO Nota VALUES(13, 13, 5, 6);
+INSERT INTO Nota VALUES(14, 14,1, 9);
 
 INSERT INTO Resource VALUES(1, 'Conditii si bucle', 7, 'res/SGBD/Resources/Conditii si bucle.pdf');
 INSERT INTO Resource VALUES(2, 'Variabile si blocuri', 7, 'res/SGBD/Resources/Variabile si blocuri.pdf');

@@ -29,10 +29,15 @@ $numemat=$_SESSION['numemat'];
     </thead>
   <tbody>
         <?php
-		$result = mysql_query("select idStudent, nume, prenume from Student order by nume");
+		//$result = mysql_query("select idStudent, nume, prenume from Student order by nume");
+		$result = mysql_query("select student.IdStudent as idstud, student.Nume as nume, student.prenume as prenume from student 
+			left join student_materie on student.IdStudent=student_materie.IdStudent
+			left join materie on student_materie.IdMaterie = materie.IdMaterie
+			where student_materie.Status='In Curs'
+			and materie.Nume='$numemat'");
 		while($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
 			echo '<tr><td>',$line["nume"],' ',$line["prenume"],'</td>';
-			$idstud = $line["idStudent"];
+			$idstud = $line["idstud"];
 			$result2 = mysql_query("select assignment.IdAssignment as idassign from assignment 
 										join materie on materie.idMaterie=assignment.idMaterie 
 										where materie.nume = '$numemat'");

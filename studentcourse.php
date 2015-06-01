@@ -89,6 +89,7 @@ ORDER BY due;");
 						}
 				}
 				$medie=$medie/$nr;
+				$_SESSION['medie']=$medie;
 				if($medie>5){
 					echo '<tr>
 					  <td><a href="',$line["path"],'"><strong>',$line["titlu"],'</strong></a></td>
@@ -109,7 +110,7 @@ ORDER BY due;");
       </tbody>
     </table>
 	<form action="uploadstud.php" method="post" enctype='multipart/form-data' class="formular"><br>
-		Numar Tema<input type="text" name="numetema"><br>
+		Nume Assignment<input type="text" name="numetema"><br>
 		<input type="file" name="uploadFile" class="file-upload">
 		<input type="submit"  name="submit" value="Upload File" class="submit-upload">
 	</form>

@@ -47,3 +47,18 @@ left join submission on assignment.IdAssignment=submission.IdSubmission
 left join Student on Student.idStudent=submission.idStudent
 left join nota on submission.IdSubmission=nota.IdSubmission
 where student.IdStudent=2 or submission.IdSubmission <=> NULL
+
+--studentii activi la materia Data
+select student.IdStudent, student.Nume from student 
+left join student_materie on student.IdStudent=student_materie.IdStudent
+left join materie on student_materie.IdMaterie = materie.IdMaterie
+where student_materie.Status='In Curs'
+and materie.Nume='SGBD'
+
+--nr. de studenti care vor aparea in raport
+select count(*) from
+(select student.IdStudent, student.Nume from student
+left join student_materie on student.IdStudent=student_materie.IdStudent
+left join materie on student_materie.IdMaterie = materie.IdMaterie
+where student_materie.Status='In Curs'
+and materie.Nume='SGBD') a

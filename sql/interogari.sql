@@ -56,9 +56,8 @@ where student_materie.Status='In Curs'
 and materie.Nume='SGBD'
 
 --nr. de studenti care vor aparea in raport
-select count(*) from
-(select student.IdStudent, student.Nume from student
+select count(student.IdStudent) from student
 left join student_materie on student.IdStudent=student_materie.IdStudent
 left join materie on student_materie.IdMaterie = materie.IdMaterie
 where student_materie.Status='In Curs'
-and materie.Nume='SGBD') a
+and materie.Nume='SGBD'

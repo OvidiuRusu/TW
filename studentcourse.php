@@ -40,7 +40,8 @@
       <tbody>
         
 	  <?php
-		$result = mysql_query("SELECT A.t as titlu, A.p as path, A.d as due, B.n as nota FROM (select assignment.IdAssignment as id, assignment.titlu as t,assignment.path as p,assignment.duedate as d
+		$result = mysql_query("SELECT A.t as titlu, A.p as path, A.d as due, B.n as nota, A.type as tip FROM (select assignment.IdAssignment as id,
+    assignment.titlu as t,assignment.path as p,assignment.duedate as d, assignment.tip as type
 from assignment JOIN materie ON materie.IdMaterie=assignment.IdMaterie 
 where materie.nume='$numemat') AS A
 LEFT JOIN
@@ -55,12 +56,24 @@ and account.Username = '$username') AS B
 ON A.id = B.id
 ORDER BY due;");
 		while($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+      if($line["tip"]=='Tema')
+      {
 		echo '<tr>
           <td><a href="',$line["path"],'"><strong>',$line["titlu"],'</strong></a></td>
           <td>',$line["due"],'</td>
           <td>',$line["nota"],'</td>
         </tr>';
          }
+      else
+      {
+        //de modificat
+        echo '<tr>
+          <td><a href="',$line["path"],'"><strong>',$line["titlu"],'</strong></a></td>
+          <td>',$line["idstudent"],'</td>
+          <td>',$line["nota"],'</td>
+        </tr>';
+      }
+       }
          ?>
     
       </tbody>

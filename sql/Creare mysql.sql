@@ -175,7 +175,7 @@ INSERT INTO profesor VALUES (15, 'Dorel', 'Lucanu', 'dorel.lucanu@info.uaic.ro',
 
   
 INSERT INTO materie VALUES(1,'Algoritmi Genetici',3,NULL);
-INSERT INTO materie VALUES(2,'Limbaje formale, automate si compilatoare',3,NULL);
+INSERT INTO materie VALUES(2,'LFAC',3,NULL);
 INSERT INTO materie VALUES(3,'Retele',3,NULL);
 INSERT INTO materie VALUES(4,'Baze de date',3,NULL);
 INSERT INTO materie VALUES(5,'Algoritmica Grafurilor',3,NULL);

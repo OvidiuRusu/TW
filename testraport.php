@@ -4,7 +4,7 @@ include('connection.php');
 require("reporting/fpdf.php");
 class PDF extends FPDF
 {
-	function CreateTable($header)
+	function CreateTable($header,$data)
 	 {
 	 	// Column widths
     $w = array(40, 35);

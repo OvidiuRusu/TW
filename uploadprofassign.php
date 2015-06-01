@@ -21,6 +21,8 @@ if(isset($_POST['submit'])){
 	$path="res/".$_SESSION['numemat']."/Assignments/{$_FILES['uploadFile']['name']}";
 	mysql_query("INSERT INTO assignment VALUES ('$idassign','$idmat','$titlu','$descriere','$data','$duedate','$punctaj','$tip','$path')");
 	print "Upload reusit.";
-	echo '<meta http-equiv=REFRESH CONTENT=3;url="profesorcourse.php?name=',$_SESSION['numemat'],'">';
+	$mat = $_SESSION['numemat'];
+	$mat = str_replace(" ","%20",$mat);
+	echo '<meta http-equiv=REFRESH CONTENT=3;url="profesorcourse.php?name=',$mat,'">';
 }
  ?>

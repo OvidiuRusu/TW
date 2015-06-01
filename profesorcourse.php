@@ -26,10 +26,9 @@
       <li><a href="profindex.php"><?php echo $username ?></a></li>
     </ul>
   <div id="contentleft">
-    <ul id="nav2">
+    <ul id="nav2" style="margin-left: 30px">
       <li><a href="#" style="color: #000;">Assigments</a></li>
       <li><a href="profsubs.php?name=<?php print $numemat?>">Submissions</a></li>
-      <li><a href="profcatalog.php?name=<?php print $numemat?>" target="_blank">Catalog</a></li>
     </ul>  
     <table>
       <thead>
@@ -85,7 +84,8 @@
 	</form>
 	<div id="reportdiv">
     <a href="testraport.php" id="reports" target="_blank">Reports</a><br>
-    <a href="similaritati.php" id="reports" target="_blank">Similaritati</a>
+    <a href="similaritati.php" id="reports" target="_blank">Similaritati</a></br>
+    <a href="profcatalog.php?name=<?php print $numemat?>" id="reports" target="_blank">Catalog</a>
   </div>
   </div>
 </div>
